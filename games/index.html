@@ -30,22 +30,11 @@
  <script type = "text/javascript">
  function roll(){
   //create variables for form elements
-  var spnRaw = document.getElementById("spnRaw");
-  var spn100 = document.getElementById("spn100");
   var spnFinal = document.getElementById("spnFinal");
   
   //get random number
-  var raw = Math.random();
-  spnRaw.innerHTML = raw;
-  
-  //multiply by 100
-  var times100 = raw * 100;
-  spn100.innerHTML = times100;
-  
-  //get the ceiling
-  var final = Math.ceil(times100);
+  var final = Math.cell(Math.random() * 100);
   spnFinal.innerHTML = final;
-  
  } // end roll
  </script>
  
