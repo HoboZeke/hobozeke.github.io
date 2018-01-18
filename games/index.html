@@ -28,8 +28,9 @@
  
  
  <script type = "text/javascript">
- function roll(){
-   //create variables for form elements
+ function setup()
+  {
+    //create variables for form elements
  var playerDefense = document.getElementById("playerDefense");
  var playerAttack = document.getElementById("playerAttack");
  var computerDefense = document.getElementById("computerDefense");
@@ -50,7 +51,10 @@
   //playerHealth.innerHTML = plrHP;
   //var comHP = 100;
   //computerHealth.innerHTML = comHP;
+  }
   
+  function roll(){
+   
   //get random number
   plrDef = Math.floor((Math.random() * 100) + 1);
   playerDefense.innerHTML = plrDef;
@@ -79,6 +83,10 @@
  <h1>Make random numbers fight</h1>
  <form>
   <fieldset>
+   <button type = "button"
+     onclick = "setup()">
+    Setup
+   </button>
    <label>Player Defense</label>
    <span id = "playerDefense">0</span>
    <button type = "button"
