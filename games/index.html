@@ -66,21 +66,21 @@
   computerAttack.innerHTML = comAtk;
   
   comHP = Number(computerDefense.innerHTML) - Number(playerAttack.innerHTML);
-  comHP = Number(computerHealth.innerHTML) - comHP;
+  //comHP = Number(computerHealth.innerHTML) - comHP;
   computerHealth.innerHTML = comHP;
   
   plrHP = Number(playerDefense.innerHTML) - Number(computerAttack.innerHTML);
-  plrHP = Number(playerHealth.innerHTML) - plrHP;
+  //plrHP = Number(playerHealth.innerHTML) - plrHP;
   playerHealth.innerHTML = plrHP;
   
   if (Number(computerHealth.innerHTML) < 1)
   {
-   computerHealth.innerHTML = DEAD!;
+  // computerHealth.innerHTML = DEAD!;
   }
   
   if (Number(playerHealth.innerHTML) < 1)
   {
-   playerHealth.innerHTML = DEAD!;
+   //playerHealth.innerHTML = DEAD!;
   }
  } // end roll
   
