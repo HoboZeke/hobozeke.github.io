@@ -28,16 +28,22 @@
  
  
  <script type = "text/javascript">
- function roll(){
-  //create variables for form elements
-  var playerDefense = document.getElementById("playerDefense");
-  var playerAttack = document.getElementById("playerAttack");
-  var computerDefense = document.getElementById("computerDefense");
-  var computerAttack = document.getElementById("computerAttack");
-  //var computerHealth = document.getElementById("computerHealth");
-  //var playerHealth = document.getElementById("playerHealth");
-  //var score = document.getElementById("score");
+ //create variables for form elements
+ var playerDefense = document.getElementById("playerDefense");
+ var playerAttack = document.getElementById("playerAttack");
+ var computerDefense = document.getElementById("computerDefense");
+ var computerAttack = document.getElementById("computerAttack");
+ //var computerHealth = document.getElementById("computerHealth");
+ //var playerHealth = document.getElementById("playerHealth");
+ //var score = document.getElementById("score");
   
+  var plrDef;
+  var plrAtk;
+  var comDef;
+  var comAtk;
+  
+  function roll(){
+   
   //declare variables
   //var scoreValue = 0;
   //score.innerHTML = scoreValue;
@@ -47,15 +53,24 @@
   //computerHealth.innerHTML = comHP;
   
   //get random number
-  var plrDef = Math.floor((Math.random() * 100) + 1);
+  plrDef = Math.floor((Math.random() * 100) + 1);
   playerDefense.innerHTML = plrDef;
-  var plrAtk = Math.floor((Math.random() * 100) + 1);
+  plrAtk = Math.floor((Math.random() * 100) + 1);
   playerAttack.innerHTML = plrAtk;
-  var comDef = Math.floor((Math.random() * 100) + 1);
+  comDef = Math.floor((Math.random() * 100) + 1);
   computerDefense.innerHTML = comDef;
-  var comAtk = Math.floor((Math.random() * 100) + 1);
+  comAtk = Math.floor((Math.random() * 100) + 1);
   computerAttack.innerHTML = comAtk;
  } // end roll
+  
+ function increasePlrDef ()
+ {
+   if (plrDef < 100)
+   {
+    plrDef = plrDef + 1;
+    playerDefense.innerHTML = plrDef;
+   }
+ }
  </script>
  
  
@@ -67,6 +82,10 @@
   <fieldset>
    <label>Player Defense</label>
    <span id = "playerDefense">0</span>
+   <button type = "button"
+     onclick = "increasePlrDef()">
+    Increase
+   </button>
    <label>Player Attack</label>
    <span id = "playerAttack">0</span>
    <label>Computer Defense</label>
