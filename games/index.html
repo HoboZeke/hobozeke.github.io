@@ -72,9 +72,10 @@
   
  function increasePlrDef ()
  {
-   if (playerDefense.innerHTML < 100)
+   if (Number(playerDefense.innerHTML) < 100)
    {
-    var plrDef = playerDefense.innerHTML + 1;
+    var plrDef = Number(playerDefense.innerHTML);
+    plrDef = plrDef + 1;
     playerDefense.innerHTML = plrDef;
    }
  }
