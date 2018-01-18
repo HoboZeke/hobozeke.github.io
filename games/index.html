@@ -35,8 +35,8 @@
  var playerAttack = document.getElementById("playerAttack");
  var computerDefense = document.getElementById("computerDefense");
  var computerAttack = document.getElementById("computerAttack");
- //var computerHealth = document.getElementById("computerHealth");
- //var playerHealth = document.getElementById("playerHealth");
+ var computerHealth = document.getElementById("computerHealth");
+ var playerHealth = document.getElementById("playerHealth");
  //var score = document.getElementById("score");
   
   var plrDef = 1;
@@ -60,14 +60,28 @@
  function roll()
  {
   //get random number
-  plrDef = Math.floor((Math.random() * 100) + 1);
-  playerDefense.innerHTML = plrDef;
-  plrAtk = Math.floor((Math.random() * 100) + 1);
-  playerAttack.innerHTML = plrAtk;
   comDef = Math.floor((Math.random() * 100) + 1);
   computerDefense.innerHTML = comDef;
   comAtk = Math.floor((Math.random() * 100) + 1);
   computerAttack.innerHTML = comAtk;
+  
+  comHP = Number(computerDefense.innerHTML) - Number(playerAttack.innerHTML);
+  comHP = Number(computerHealth.innerHTML) - comHP;
+  computerHealth.innerHTML = comHP;
+  
+  plrHP = Number(playerDefense.innerHTML) - Number(computerAttack.innerHTML);
+  plrHP = Number(playerHealth.innerHTML) - plrHP;
+  playerHealth.innerHTML = plrHP;
+  
+  if (Number(computerHealth.innerHTML) < 1)
+  {
+   computerHealth.innerHTML = DEAD!;
+  }
+  
+  if (Number(playerHealth.innerHTML) < 1)
+  {
+   playerHealth.innerHTML = DEAD!;
+  }
  } // end roll
   
  function increasePlrDef ()
@@ -102,7 +116,7 @@
   if (Number(playerAttack.innerHTML) > 1)
    {
     var plrAtk = Number(playerAttack.innerHTML);
-    plrAtk = plrAtk + 1;
+    plrAtk = plrAtk - 1;
     playerAttack.innerHTML = plrAtk;
    }
  }
@@ -115,6 +129,8 @@
  <h1>Make random numbers fight</h1>
  <form>
   <fieldset>
+    <label>Player Health</label>
+   <span id = "playerHealth">100</span>
    <label>Player Defense</label>
    <span id = "playerDefense">0</span>
    <button type = "button"
@@ -135,6 +151,8 @@
      onclick = "decreasePlrAtk()">
     Decrease
    </button>
+   <label>Computer Health</label>
+   <span id = "computerHealth">100</span>
    <label>Computer Defense</label>
    <span id = "computerDefense">0</span>
    <label>Computer Attack</label>
