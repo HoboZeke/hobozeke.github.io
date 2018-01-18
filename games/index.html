@@ -81,25 +81,28 @@
  }
   function decreasePlrDef ()
  {
-   if (plrDef > 1)
+   if (Number(playerDefense.innerHTML) > 1)
    {
+    var plrDef = Number(playerDefense.innerHTML);
     plrDef = plrDef - 1;
     playerDefense.innerHTML = plrDef;
    }
  }
   function increasePlrAtk ()
  {
-   if (plrAtk < 100)
+   if (Number(playerAttack.innerHTML) < 100)
    {
+    var plrAtk = Number(playerAttack.innerHTML);
     plrAtk = plrAtk + 1;
     playerAttack.innerHTML = plrAtk;
    }
  }
   function decreasePlrAtk ()
  {
-   if (plrAtk > 1)
+  if (Number(playerAttack.innerHTML) > 1)
    {
-    plrAtk = plrAtk - 1;
+    var plrAtk = Number(playerAttack.innerHTML);
+    plrAtk = plrAtk + 1;
     playerAttack.innerHTML = plrAtk;
    }
  }
@@ -112,10 +115,6 @@
  <h1>Make random numbers fight</h1>
  <form>
   <fieldset>
-   <button type = "button"
-     onclick = "setup()">
-    Setup
-   </button>
    <label>Player Defense</label>
    <span id = "playerDefense">0</span>
    <button type = "button"
