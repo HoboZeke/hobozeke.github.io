@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
  <meta charset="UTF-8">
- <title>rand100.html</title>
+ <title>Pigeon Game 1</title>
  <style type = "text/css">
  fieldset {
   width: 600px;
@@ -30,22 +30,43 @@
  <script type = "text/javascript">
  function roll(){
   //create variables for form elements
-  var spnFinal = document.getElementById("spnFinal");
+  var playerDefense = document.getElementById("playerDefense");
+  var playerAttack = document.getElementById("playerAttack");
+  var computerDefense = document.getElementById("computerDefense");
+  var computerAttack = document.getElementById("computerAttack");
+  var computerHealth = document.getElementById("computerHealth");
+  var playerHealth = document.getElementById("playerHealth");
+  var score = document.getElementById("score");
+  
+  //declare variables
+  var scoreValue = 0;
+  score.innerHTML = scoreValue;
+  var plrHP = 100;
+  playerHealth.innerHTML = plrHP;
+  var comHP = 100;
+  computerHealth.innerHTML = comHP;
   
   //get random number
-  var final = Math.floor((Math.random() * 100) + 1);
-  spnFinal.innerHTML = final;
+  var plrDef = Math.floor((Math.random() * 100) + 1);
+  playerDefense.innerHTML = plrDef;
+  var plrAtk = Math.floor((Math.random() * 100) + 1);
+  playerDefense.innerHTML = plrAtk;
+  var comDef = Math.floor((Math.random() * 100) + 1);
+  playerDefense.innerHTML = comDef;
+  var comAtk = Math.floor((Math.random() * 100) + 1);
+  playerDefense.innerHTML = comAtk;
  } // end roll
  </script>
  
  
+ 
 </head>
 <body>
- <h1>Make random numbers 1 - 100</h1>
+ <h1>Make random numbers fight</h1>
  <form>
   <fieldset>
    <label>number</label>
-   <span id = "spnFinal">0</span>
+   <span id = "playerDefense">0</span>
    <button type = "button"
      onclick = "roll()">
     roll the dice
