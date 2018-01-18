@@ -39,10 +39,10 @@
  //var playerHealth = document.getElementById("playerHealth");
  //var score = document.getElementById("score");
   
-  var plrDef = 0;
-  var plrAtk = 0;
-  var comDef = 0;
-  var comAtk = 0;
+  var plrDef = 1;
+  var plrAtk = 1;
+  var comDef = 1;
+  var comAtk = 1;
    
   //declare variables
   //var scoreValue = 0;
@@ -53,8 +53,8 @@
   //computerHealth.innerHTML = comHP;
   }
   
-  function roll(){
-   
+ function roll()
+ {
   //get random number
   plrDef = Math.floor((Math.random() * 100) + 1);
   playerDefense.innerHTML = plrDef;
@@ -72,6 +72,30 @@
    {
     plrDef = plrDef + 1;
     playerDefense.innerHTML = plrDef;
+   }
+ }
+  function decreasePlrDef ()
+ {
+   if (plrDef > 1)
+   {
+    plrDef = plrDef - 1;
+    playerDefense.innerHTML = plrDef;
+   }
+ }
+  function increasePlrAtk ()
+ {
+   if (plrAtk < 100)
+   {
+    plrAtk = plrAtk + 1;
+    playerAttack.innerHTML = plrAtk;
+   }
+ }
+  function decreasePlrAtk ()
+ {
+   if (plrAtk > 1)
+   {
+    plrAtk = plrAtk - 1;
+    playerAttack.innerHTML = plrAtk;
    }
  }
  </script>
@@ -93,8 +117,20 @@
      onclick = "increasePlrDef()">
     Increase
    </button>
+   <button type = "button"
+     onclick = "decreasePlrDef()">
+    Decrease
+   </button>
    <label>Player Attack</label>
    <span id = "playerAttack">0</span>
+   <button type = "button"
+     onclick = "increasePlrAtk()">
+    Increase
+   </button>
+   <button type = "button"
+     onclick = "decreasePlrAtk()">
+    Decrease
+   </button>
    <label>Computer Defense</label>
    <span id = "computerDefense">0</span>
    <label>Computer Attack</label>
