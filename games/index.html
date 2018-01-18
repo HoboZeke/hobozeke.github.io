@@ -54,7 +54,7 @@
   var comDef = Math.floor((Math.random() * 100) + 1);
   computerDefense.innerHTML = comDef;
   var comAtk = Math.floor((Math.random() * 100) + 1);
-  ComputerAttack.innerHTML = comAtk;
+  computerAttack.innerHTML = comAtk;
  } // end roll
  </script>
  
@@ -65,11 +65,11 @@
  <h1>Make random numbers fight</h1>
  <form>
   <fieldset>
-   <label>number</label>
+   <label>Player Defense</label>
    <span id = "playerDefense">0</span>
    <button type = "button"
      onclick = "roll()">
-    roll the dice
+    Generate
    </button>
   </fieldset>
  </form>
