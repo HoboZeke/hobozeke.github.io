@@ -38,6 +38,7 @@
  var computerHealth = document.getElementById("computerHealth");
  var playerHealth = document.getElementById("playerHealth");
  var score = document.getElementById("score");
+ var gameOver = 0; //0 is game still going, 1 is player victory, 2 is computer victory
   
    //Declare Variables
   var plrDef = 1;
@@ -58,6 +59,26 @@
   
  function roll()
  {
+  //Check for game over
+  if (gameOver == 1)
+  {
+     plrHP = 100;
+     playerHealth.innerHTML = plrHP;
+     comHP = 100 + (Number(score.innerHTML) * 10);
+     computerHealth.innerHTML = comHP;
+   return;
+  }
+  else if (gameOver == 2)
+  {
+    var resetScore = 0;
+    score.innerHTML = resetScore;
+    plrHP = 100;
+    playerHealth.innerHTML = plrHP;
+    comHP = 100 + (Number(score.innerHTML) * 10);
+    computerHealth.innerHTML = comHP;
+   return;
+   }
+  
   //get random number
   comDef = Math.floor((Math.random() * 100) + 1);
   computerDefense.innerHTML = comDef;
@@ -74,7 +95,9 @@
   
   if (Number(computerHealth.innerHTML) < 1)
   {
-   //computerHealth.innerHTML = 0;
+    computerHealth.innerHTML = "DEAD!";
+    var inc = Number(score.innerHTML) + 1;
+    score.innerHTML = inc;
   }
   
   if (Number(playerHealth.innerHTML) < 1)
