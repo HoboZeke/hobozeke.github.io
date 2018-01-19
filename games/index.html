@@ -37,8 +37,9 @@
  var computerAttack = document.getElementById("computerAttack");
  var computerHealth = document.getElementById("computerHealth");
  var playerHealth = document.getElementById("playerHealth");
- //var score = document.getElementById("score");
+ var score = document.getElementById("score");
   
+   //Declare Variables
   var plrDef = 1;
    playerDefense.innerHTML = plrDef;
   var plrAtk = 1;
@@ -51,10 +52,8 @@
    computerAttack.innerHTML = comAtk;
   var comHP = 100;
    computerHealth.innerHTML = comHP;
-   
-  //declare variables
-  //var scoreValue = 0;
-  //score.innerHTML = scoreValue;
+  var scoreValue = 0;
+   score.innerHTML = scoreValue;
   }
   
  function roll()
@@ -75,12 +74,12 @@
   
   if (Number(computerHealth.innerHTML) < 1)
   {
-   //computerHealth.innerHTML = DEAD!;
+   //computerHealth.innerHTML = 0;
   }
   
   if (Number(playerHealth.innerHTML) < 1)
   {
-   //playerHealth.innerHTML = DEAD!;
+    playerHealth.innerHTML = "DEAD!";
   }
  } // end roll
   
@@ -161,6 +160,8 @@
      onclick = "roll()">
     Generate
    </button>
+    <label>Score</label>
+   <span id = "score">0</span>
   </fieldset>
  </form>
 </body>
