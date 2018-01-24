@@ -37,7 +37,6 @@ function throwSeeds()
     seeds = 0;
     
     var pigeonDifference = pigeons - previousPigeons;
-    checkForFatPigeons(pigeonDifference);
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
