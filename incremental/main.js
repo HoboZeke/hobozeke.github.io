@@ -28,10 +28,13 @@ function getRandomInt(max)
 
 function throwSeeds()
 {
+    var previousPigeons = pigeons;
     
     var pigeonHunger = getRandomInt(5) + 1;
     pigeons = Math.floor(seeds/5);
     seeds = 0;
+    
+    var pigeonDifference = pigeons - previousPigeons;
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
