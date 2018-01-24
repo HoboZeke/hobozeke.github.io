@@ -38,10 +38,8 @@ function throwSeeds()
     seeds = 0;
     
     pigeonDifference = pigeons - previousPigeons;
-    if(pigeonDifference < 0)
-    {
-        persistantPigeons = previousPigeons - pigeonDifference;
-    }
+    persistantPigeons = previousPigeons + pigeonDifference;
+
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
