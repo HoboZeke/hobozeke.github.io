@@ -36,15 +36,6 @@ function throwSeeds()
     seeds = 0;
     
     var pigeonDifference = pigeons - previousPigeons;
-    
-    if (pigeonDifference < 0)
-    {
-        var persistantPigeons = persistantPigeons + pigeonDifference; //Dif will be a negetive so needs to be a plus
-    }
-    else
-    }
-        var persistantPigeons = previousPigeons;
-    }
 
     
     document.getElementById("pigeons").innerHTML = pigeons;
