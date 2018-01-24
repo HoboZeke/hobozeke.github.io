@@ -4,6 +4,7 @@ var pigeons = 0;
 var pigeonDifference = 0;
 var persistantPigeons = 0;
 var interval = 0;
+var fatPigeons = 0;
 
 
 function seedClick (number)
@@ -49,13 +50,15 @@ function throwSeeds()
     interval = interval + 1;
     if (interval == 7)
     {
+        fatPigeons = fatPigeons + persistantPigeons;
         interval = 0;
     }
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
-    document.getElementById("pigeonDifference").innerHTML = pigeonDifference; 
+    document.getElementById("interval").innerHTML = interval; 
     document.getElementById("persistantPigeons").innerHTML = persistantPigeons;
+     document.getElementById("fatPigeons").innerHTML = fatPigeons;
 }
 
 window.setInterval(function()
