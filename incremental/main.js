@@ -29,7 +29,7 @@ function getRandomInt(max)
 function throwSeeds()
 {
     var pigeonHunger = getRandomInt(5) + 1;
-    pigeons = seeds/5;
+    pigeons = Math.floor(seeds/5);
     seeds = 0;
     
     document.getElementById("pigeons").innerHTML = pigeons;
