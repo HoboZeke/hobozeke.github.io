@@ -1,6 +1,7 @@
 var seeds = 0;
 var seedHarvesters = 0;
 var pigeons = 0;
+var persistantPigeons = 0;
 
 
 function seedClick (number)
