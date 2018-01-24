@@ -39,14 +39,14 @@ function throwSeeds()
     
     var pigeonDifference = pigeons - previousPigeons;
     
-    if (pigeonDifference < 0)
+   /* if (pigeonDifference < 0)
     {
         persistantPigeons = persistantPigeons + pigeonDifference; //Dif will be a negetive so needs to be a plus
     }
     else
     }
         persistantPigeons = previousPigeons;
-    }
+    }*/
 
     interval = interval + 1;
     
