@@ -1,6 +1,7 @@
 var seeds = 0;
 var seedHarvesters = 0;
 var pigeons = 0;
+var pigeonDifference = 0;
 var persistantPigeons = 0;
 
 
@@ -36,7 +37,7 @@ function throwSeeds()
     pigeons = Math.floor(seeds/5);
     seeds = 0;
     
-    var pigeonDifference = pigeons - previousPigeons;
+    pigeonDifference = pigeons - previousPigeons;
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
