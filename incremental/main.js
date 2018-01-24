@@ -13,8 +13,8 @@ function buySeedHarvester(){
         seedHarvesters = seedHarvesters + 1;                                   //increases number of cursors
     	seeds = seeds - harvesterCost;                                           //removes the cookies spent
         document.getElementById('seedHarvesters').innerHTML = seedHarvesters;  //updates the number of cursors for the user
-        document.getElementById('seeds').innerHTML = seed;                       //updates the number of cookies for the user
+        document.getElementById('seeds').innerHTML = seeds;                       //updates the number of cookies for the user
     };
-    var nextCost = Math.floor(10 * Math.pow(1.1,cursors));                       //works out the cost of the next cursor
+    var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
 };
