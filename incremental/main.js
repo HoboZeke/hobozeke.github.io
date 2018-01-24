@@ -7,7 +7,8 @@ function seedClick (number)
     document.getElementById("seeds").innerHTML = seeds;
 }
 
-function buySeedHarvester(){
+function buySeedHarvester()
+{
     var harvesterCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         //works out the cost of this cursor
     if(seeds >= harvesterCost){                                                 //checks that the player can afford the cursor
         seedHarvesters = seedHarvesters + 1;                                   //increases number of cursors
@@ -18,3 +19,8 @@ function buySeedHarvester(){
     var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
 };
+
+window.setInterval(function()
+{
+    seedClick(seedHarvesters);
+}, 1000);
