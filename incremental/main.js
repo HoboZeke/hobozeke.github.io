@@ -54,7 +54,7 @@ function throwSeeds()
     {
         fatPigeons = persistantPigeons;
         pigeons = pigeons - persistantPigeons;
-        document.getElementById("fatPigeons").innerHTML = fatPigeons;
+        document.getElementById("fatPigeons").innerHTML = fatPigeons + "fat pigeons";
         
         persistantPigeons = 0;
         interval = 0;
