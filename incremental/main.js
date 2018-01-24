@@ -1,6 +1,7 @@
 var seeds = 0;
 var seedHarvesters = 0;
 var pigeons = 0;
+var persistantPigeons = 0;
 
 function seedClick (number)
 {
@@ -35,6 +36,16 @@ function throwSeeds()
     seeds = 0;
     
     var pigeonDifference = pigeons - previousPigeons;
+    
+    if (pigeonDifference < 0)
+    {
+        persistantPigeons = persistantPigeons + pigeonDifference; //Dif will be a negetive so needs to be a plus
+    }
+    else
+    }
+        persistantPigeons = previousPigeons;
+    }
+
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
