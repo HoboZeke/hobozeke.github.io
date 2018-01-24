@@ -40,6 +40,7 @@ function throwSeeds()
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
+    document.getElementById("pigeonDifference").innerHTML = pigeonDifference;
 }
 
 window.setInterval(function()
