@@ -42,10 +42,6 @@ function throwSeeds()
     {
         persistantPigeons = previousPigeons + pigeonDifference;
     }
-    else
-    {
-        persistantPigeons = previousPigeons;
-    }
 
     
     document.getElementById("pigeons").innerHTML = pigeons;
