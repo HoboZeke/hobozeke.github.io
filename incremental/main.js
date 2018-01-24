@@ -23,7 +23,8 @@ function buySeedHarvester()
 
 function throwSeeds()
 {
-    pigeons = seeds/Math.floor(Math.random()*5);
+    var pigeonHunger = Math.floor(Math.random() * Math.floor(5))
+    pigeons = pigeonHunger/seeds;
     seeds = 0;
     
     document.getElementById("pigeons").innerHTML = pigeons;
