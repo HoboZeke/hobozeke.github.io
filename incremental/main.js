@@ -41,19 +41,6 @@ function throwSeeds()
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
-    document.getElementById("persistantPigeons").innerHTML = persistantPigeons;
-}
-
-function checkForFatPigeons(difference)
-{
-    if (difference < 0)
-    {
-        persistantPigeons = persistantPigeon + difference;
-    }
-    else
-    {
-        persistantPigeons = previousPigeons;
-    }
 }
 
 window.setInterval(function()
