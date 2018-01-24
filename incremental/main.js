@@ -29,7 +29,6 @@ function getRandomInt(max)
 
 function throwSeeds()
 {
-    var persistantPigeons = 0;
     var previousPigeons = pigeons;
     
     var pigeonHunger = getRandomInt(5) + 1;
@@ -40,11 +39,11 @@ function throwSeeds()
     
     if (pigeonDifference < 0)
     {
-        persistantPigeons = persistantPigeons + pigeonDifference; //Dif will be a negetive so needs to be a plus
+        var persistantPigeons = persistantPigeons + pigeonDifference; //Dif will be a negetive so needs to be a plus
     }
     else
     }
-        persistantPigeons = previousPigeons;
+        var persistantPigeons = previousPigeons;
     }
 
     
