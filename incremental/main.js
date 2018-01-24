@@ -44,7 +44,7 @@ function throwSeeds()
     pigeonDifference = pigeons - persistantPigeons;
     if (seeds > pigeonDifference)
     {
-        persistantPigeons = persistantPigeons + pigeonDifference;
+        persistantPigeons = pigeons;
     }
     interval = interval + 1;
     if (interval == 7)
