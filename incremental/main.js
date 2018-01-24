@@ -1,5 +1,6 @@
 var seeds = 0;
 var seedHarvesters = 0;
+var pigeons = 0;
 
 function seedClick (number)
 {
@@ -19,6 +20,15 @@ function buySeedHarvester()
     var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
 };
+
+function throwSeeds()
+{
+    pigeons = Math.floor(seeds/Math.random()*5);
+    seeds = 0;
+    
+    document.getElementById("pigeons").innerHTML = pigeons;
+    document.getElementById("seeds").innerHTML = seeds;
+}
 
 window.setInterval(function()
 {
