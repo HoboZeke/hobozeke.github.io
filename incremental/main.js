@@ -3,6 +3,7 @@ var seedHarvesters = 0;
 var pigeons = 0;
 var pigeonDifference = 0;
 var persistantPigeons = 0;
+var interval = 0;
 
 
 function seedClick (number)
@@ -36,13 +37,20 @@ function throwSeeds()
     var pigeonHunger = getRandomInt(5) + 1;
     pigeons = Math.floor(seeds/5);
     seeds = 0;
-    
+    if(interval == 0)
+    {
+        persistantPigeons = pigeons;
+    }
     pigeonDifference = pigeons - previousPigeons;
     if (seeds > pigeonDifference)
     {
-        persistantPigeons = previousPigeons + pigeonDifference;
+        persistantPigeons = persistantPigeons + pigeonDifference;
     }
-
+    interval = interval + 1;
+    if (interval == 7)
+    {
+        interval = 0;
+    }
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
