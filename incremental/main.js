@@ -37,10 +37,22 @@ function throwSeeds()
     seeds = 0;
     
     var pigeonDifference = pigeons - previousPigeons;
-
+    checkForFatPigeons(pigeonDifference);
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
+}
+
+function checkForFatPigeons(difference)
+{
+    if (difference < 0)
+    {
+        persistantPigeons = persistantPigeon + difference;
+    }
+    else
+    {
+        persistantPigeons = previousPigeons;
+    }
 }
 
 window.setInterval(function()
