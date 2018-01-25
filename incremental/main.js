@@ -39,12 +39,12 @@ function buySeedHarvester()
 
 function buySeedGrinders()
 {
-    var grinderCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         //works out the cost of this cursor
+    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         //works out the cost of this cursor
     if(flour >= grinderCost){                                                 //checks that the player can afford the cursor
         seedGrinders = seedGrinders + 1;                                   //increases number of cursors
     	flour = flour - grinderCost;                                              //removes the cookies spent
-        document.getElementById('seedGrinder').innerHTML = seedGrinders;          //updates the number of cursors for the user
-        document.getElementById('flour').innerHTML = flour;                       //updates the number of cookies for the user
+        document.getElementById("seedGrinders").innerHTML = seedGrinders;          //updates the number of cursors for the user
+        document.getElementById("flour").innerHTML = flour;                       //updates the number of cookies for the user
     }
     var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
