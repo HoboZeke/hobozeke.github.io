@@ -1,5 +1,6 @@
 var seeds = 0;
 var seedHarvesters = 0;
+var seedGrinders = 0;
 var pigeons = 0;
 var pigeonDifference = 0;
 var persistantPigeons = 0;
@@ -17,6 +18,11 @@ function seedClick (number)
     seeds = seeds+number;
     document.getElementById("seeds").innerHTML = seeds;
 }
+function flourClick (number)
+{
+    flour = flour+number;
+    document.getElementById("flour").innerHTML = flour;
+}
 
 function buySeedHarvester()
 {
@@ -26,6 +32,19 @@ function buySeedHarvester()
     	seeds = seeds - harvesterCost;                                           //removes the cookies spent
         document.getElementById('seedHarvesters').innerHTML = seedHarvesters;  //updates the number of cursors for the user
         document.getElementById('seeds').innerHTML = seeds;                       //updates the number of cookies for the user
+    }
+    var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
+    document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
+}
+
+function buySeedGrinders()
+{
+    var grinderCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         //works out the cost of this cursor
+    if(flour >= grinderCost){                                                 //checks that the player can afford the cursor
+        seedGrinders = seedGrinders + 1;                                   //increases number of cursors
+    	flour = flour - grinderCost;                                              //removes the cookies spent
+        document.getElementById('seedGrinder').innerHTML = seedGrinders;          //updates the number of cursors for the user
+        document.getElementById('flour').innerHTML = flour;                       //updates the number of cookies for the user
     }
     var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
@@ -79,7 +98,7 @@ function throwSeeds()
     document.getElementById("interval").innerHTML = interval; 
     if (fatPigeonsRevealed == 1)
         {
-            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons";
+            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";
         }
         
     if (oldFatPigeonsRevealed == 1)
@@ -114,4 +133,5 @@ function bakeBread ()
 window.setInterval(function()
 {
     seedClick(seedHarvesters);
+    flourClick(seedGrinders);
 }, 1000);
