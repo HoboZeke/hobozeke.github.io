@@ -63,7 +63,7 @@ function throwSeeds()
 
 function groundSeedsIntoFlour ()
 {
-    flour = seeds/10;
+    flour = flour + seeds/10;
     seeds = 0;
     
     document.getElementById("seeds").innerHTML = seeds;
