@@ -51,13 +51,13 @@ function throwSeeds()
     if (interval == 8)
     {
         fatPigeons = fatPigeons + persistantPigeons;
+        document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons";
         interval = 1;
     }
     
     document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
     document.getElementById("seeds").innerHTML = seeds;
     document.getElementById("interval").innerHTML = interval; 
-    document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons";
 }
 
 window.setInterval(function()
