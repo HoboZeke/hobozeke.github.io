@@ -65,7 +65,7 @@ function throwSeeds()
 function groundSeedsIntoFlour ()
 {
     flour = flour + seeds/10;
-    flour = Math.floor(flour*10) / 10; //Round the flour to 1 dp.
+    flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
     seeds = 0;
     
     document.getElementById("seeds").innerHTML = seeds;
