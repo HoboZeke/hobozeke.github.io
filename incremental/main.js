@@ -50,12 +50,14 @@ function throwSeeds()
     interval = interval + 1;
     if (interval == 7)
     {
+        fatPigeons = fatPigeons + persistantPigeons;
         interval = 0;
     }
     
     document.getElementById("pigeons").innerHTML = pigeons;
     document.getElementById("seeds").innerHTML = seeds;
     document.getElementById("interval").innerHTML = interval; 
+    document.getElementByID("fatPigeons").innerHTML = fatPigeons;
     document.getElementById("persistantPigeons").innerHTML = persistantPigeons;
 }
 
