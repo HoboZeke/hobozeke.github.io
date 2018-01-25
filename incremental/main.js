@@ -6,6 +6,7 @@ var persistantPigeons = 0;
 var interval = 1;
 var fatPigeons = 0;
 var flour = 0;
+var bread = 0;
 
 
 function seedClick (number)
@@ -68,6 +69,18 @@ function groundSeedsIntoFlour ()
     
     document.getElementById("seeds").innerHTML = seeds;
     document.getElementById("flour").innerHTML = flour;
+}
+
+function bakeBread ()
+{
+    if (flour >= 100)
+    {
+        bread = bread + 1;
+        flour = flour - 100;
+        
+        document.getElementById("flour").innerHTML = flour;
+        document.getElementById("bread").innerHTML = bread;
+    }
 }
 
 window.setInterval(function()
