@@ -5,6 +5,7 @@ var pigeonDifference = 0;
 var persistantPigeons = 0;
 var interval = 1;
 var fatPigeons = 0;
+var flour = 0;
 
 
 function seedClick (number)
@@ -58,6 +59,15 @@ function throwSeeds()
     document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
     document.getElementById("seeds").innerHTML = seeds;
     document.getElementById("interval").innerHTML = interval; 
+}
+
+function GroundSeedsIntoFlour ()
+{
+    flour = seeds/10;
+    seeds = 0;
+    
+    document.getElementById("seeds").innerHTML = seeds;
+    document.getElementById("flour").innerHTML = flour;
 }
 
 window.setInterval(function()
