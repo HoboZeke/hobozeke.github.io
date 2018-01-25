@@ -6,6 +6,8 @@ var persistantPigeons = 0;
 var interval = 1;
 var fatPigeons = 0;
 var oldFatPigeons = 0;
+var fatPigeonsRevealed = 0;
+var oldFatPigeonsRevealed = 0;
 var flour = 0;
 var bread = 0;
 
@@ -65,25 +67,25 @@ function throwSeeds()
     if (interval == 8)
     {        
         oldFatPigeons = oldFatPigeons + fatPigeons;
+        if (oldFatPigeons >= 1){oldFatPigeonsRevealed = 1;}
         fatPigeons = persistantPigeons;
         interval = 1;
-        
-        if (fatPigeons > 0)
-        {
-            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons";
-        }
-        
-        if (oldFatPigeons > 0)
-        {
-            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
-        }
+        fatPigeonsRevealed = 1;
     }
     
     document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
     document.getElementById("seeds").innerHTML = seeds;
     document.getElementById("bread").innerHTML = bread + " loaves";
     document.getElementById("interval").innerHTML = interval; 
-    
+    if (fatPigeonsRevealed == 1)
+        {
+            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons";
+        }
+        
+    if (oldFatPigeonsRevealed == 1)
+        {
+            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
+        }
     
 }
 
