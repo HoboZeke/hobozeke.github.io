@@ -79,7 +79,7 @@ function bakeBread ()
         flour = flour - 100;
         
         document.getElementById("flour").innerHTML = flour;
-        document.getElementById("bread").innerHTML = bread;
+        document.getElementById("bread").innerHTML = bread + " loaves";
     }
 }
 
