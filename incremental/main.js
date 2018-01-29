@@ -18,6 +18,7 @@ function seedClick (number)
 {
     seeds = seeds+number;
     UpdateLabels("seeds");
+    toggleVisibility("breadButton");
 }
 function flourClick (number)
 {
@@ -118,6 +119,16 @@ function bakeBread ()
         
         UpdateLabels("flour");
         UpdateLabels("bread");
+    }
+}
+
+function toggleVisibilty(name) 
+{
+    var x = document.getElementById(name);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
     }
 }
 
