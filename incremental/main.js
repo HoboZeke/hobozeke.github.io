@@ -18,7 +18,6 @@ function seedClick (number)
 {
     seeds = seeds+number;
     UpdateLabels("seeds");
-    toggleVisibility("breadButton");
 }
 function flourClick (number)
 {
@@ -166,7 +165,6 @@ function UpdateLabels (type)
         {
             document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";
         }
-        
         if (oldFatPigeonsRevealed == 1)
         {
             document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
