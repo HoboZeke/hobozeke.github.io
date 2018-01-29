@@ -18,6 +18,7 @@ function seedClick (number)
 {
     seeds = seeds+number;
     UpdateLabels("seeds");
+    toggleVisibilty("breadButton");
 }
 function flourClick (number)
 {
