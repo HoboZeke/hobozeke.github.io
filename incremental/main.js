@@ -24,6 +24,7 @@ function seedClick (number)
 {
     seeds = seeds+number;
     UpdateLabels("seeds");
+    document.getElementById("story").innerHTML = "";
 }
 function flourClick (number)
 {
