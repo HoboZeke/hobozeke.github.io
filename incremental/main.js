@@ -13,12 +13,16 @@ var flour = 0;
 var bread = 0;
 var breadRevealed = 0;
 
+function setup()
+{
+    Hide("seedsButton");
+    Hide("breadButton");
+}
 
 function seedClick (number)
 {
     seeds = seeds+number;
     UpdateLabels("seeds");
-    toggleVisibilty("breadButton");
 }
 function flourClick (number)
 {
@@ -121,14 +125,17 @@ function bakeBread ()
     }
 }
 
-function toggleVisibilty(name) 
+function Reveal(name) 
 {
     var x = document.getElementById(name);
     if (x.style.display === "none") {
         x.style.display = "block";
-    } else {
-        x.style.display = "none";
     }
+}
+function Hide(name) 
+{
+    var x = document.getElementById(name);
+    x.style.display = "none";
 }
 
 function UpdateLabels (type)
@@ -177,4 +184,14 @@ window.setInterval(function()
 {
     seedClick(seedHarvesters);
     flourClick(seedGrinders);
+    
+    if (flour >= 100)
+    {
+        Reveal("breadButton");
+    }
+    
+    if (seeds >= 50)
+    {
+        Reveal("seedsButton");
+    }
 }, 1000);
