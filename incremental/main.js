@@ -101,7 +101,6 @@ function throwSeeds()
 function groundSeedsIntoFlour ()
 {
     flour = flour + seeds/10;
-    flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
     seeds = 0;
     
     UpdateLabels("seeds");
@@ -146,6 +145,7 @@ function UpdateLabels (type)
     
     if (type == "flour")
     {
+        flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
         document.getElementById("flour").innerHTML = flour;
         document.getElementById('seedGrinders').innerHTML = seedGrinders; 
     }
