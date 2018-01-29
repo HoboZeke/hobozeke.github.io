@@ -16,12 +16,12 @@ var bread = 0;
 function seedClick (number)
 {
     seeds = seeds+number;
-    document.getElementById("seeds").innerHTML = seeds;
+    UpdateLabels("seeds");
 }
 function flourClick (number)
 {
     flour = flour+number;
-    document.getElementById("flour").innerHTML = flour;
+    UpdateLabels("flour");
 }
 
 function buySeedHarvester()
@@ -30,8 +30,7 @@ function buySeedHarvester()
     if(seeds >= harvesterCost){                                                 //checks that the player can afford the cursor
         seedHarvesters = seedHarvesters + 1;                                   //increases number of cursors
     	seeds = seeds - harvesterCost;                                           //removes the cookies spent
-        document.getElementById('seedHarvesters').innerHTML = seedHarvesters;  //updates the number of cursors for the user
-        document.getElementById('seeds').innerHTML = seeds;                       //updates the number of cookies for the user
+        UpdateLabels("seeds");                                                //updates the number of cookies for the user
     }
     var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
@@ -43,8 +42,7 @@ function buySeedGrinders()
     if(flour >= grinderCost){                                                 //checks that the player can afford the cursor
         seedGrinders = seedGrinders + 1;                                   //increases number of cursors
     	flour = flour - grinderCost;                                              //removes the cookies spent
-        document.getElementById('seedGrinders').innerHTML = seedGrinders;          //updates the number of cursors for the user
-        document.getElementById('flour').innerHTML = flour;                       //updates the number of cookies for the user
+        UpdateLabels("flour");                                                //updates the number of cookies for the user
     }
     var nextCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       //works out the cost of the next cursor
     document.getElementById('grinderCost').innerHTML = nextCost;               //updates the cursor cost for the user
@@ -92,20 +90,11 @@ function throwSeeds()
         fatPigeonsRevealed = 1;
     }
     
-    document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
-    document.getElementById("seeds").innerHTML = seeds;
-    document.getElementById("bread").innerHTML = bread + " loaves";
-    document.getElementById("interval").innerHTML = interval; 
-    if (fatPigeonsRevealed == 1)
-        {
-            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";
-        }
-        
-    if (oldFatPigeonsRevealed == 1)
-        {
-            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
-        }
-    
+    UpdateLabels("seeds");
+    UpdateLabels("bread");
+    UpdateLabels("days"); 
+    UpdateLabels("pigeons");
+       
 }
 
 function groundSeedsIntoFlour ()
@@ -114,8 +103,8 @@ function groundSeedsIntoFlour ()
     flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
     seeds = 0;
     
-    document.getElementById("seeds").innerHTML = seeds;
-    document.getElementById("flour").innerHTML = flour;
+    UpdateLabels("seeds");
+    UpdateLabels("flour");
 }
 
 function bakeBread ()
@@ -125,8 +114,47 @@ function bakeBread ()
         bread = bread + 1;
         flour = flour - 100;
         
+        UpdateLabels("flour");
+        UpdateLabels("bread");
+    }
+}
+
+function UpdateLabels (type)
+{
+    if (type == "days")
+    {
+        document.getElementById("interval").innerHTML = interval;
+    }
+    
+    if (type == "seeds")
+    {
+        document.getElementById("seeds").innerHTML = seeds;
+        document.getElementById('seedHarvesters').innerHTML = seedHarvesters;
+    }
+    
+    if (type == "flour")
+    {
         document.getElementById("flour").innerHTML = flour;
+        document.getElementById('seedGrinders').innerHTML = seedGrinders; 
+    }
+    
+    if (type == "bread")
+    {
         document.getElementById("bread").innerHTML = bread + " loaves";
+    }
+    
+    if (type == "pigeons")
+    {
+        document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
+        if (fatPigeonsRevealed == 1)
+        {
+            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";
+        }
+        
+        if (oldFatPigeonsRevealed == 1)
+        {
+            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
+        }
     }
 }
 
