@@ -11,6 +11,7 @@ var fatPigeonsRevealed = 0;
 var oldFatPigeonsRevealed = 0;
 var flour = 0;
 var bread = 0;
+var breadRevealed = 0;
 
 
 function seedClick (number)
@@ -87,7 +88,7 @@ function throwSeeds()
         if (oldFatPigeons >= 1){oldFatPigeonsRevealed = 1;}
         fatPigeons = persistantPigeons;
         interval = 1;
-        fatPigeonsRevealed = 1;
+        if (fatPigeons >= 1){fatPigeonsRevealed = 1;}
     }
     
     UpdateLabels("seeds");
@@ -113,6 +114,7 @@ function bakeBread ()
     {
         bread = bread + 1;
         flour = flour - 100;
+        if (bread >= 1){breadRevealed = 1;}
         
         UpdateLabels("flour");
         UpdateLabels("bread");
@@ -140,7 +142,10 @@ function UpdateLabels (type)
     
     if (type == "bread")
     {
-        document.getElementById("bread").innerHTML = bread + " loaves";
+        if (breadReaveled == 1)
+        {
+            document.getElementById("bread").innerHTML = bread + " loaves";
+        }
     }
     
     if (type == "pigeons")
