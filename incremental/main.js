@@ -152,7 +152,7 @@ function UpdateLabels (type)
     
     if (type == "bread")
     {
-        if (breadReaveled == 1)
+        if (breadReaveled === 1)
         {
             document.getElementById("bread").innerHTML = bread + " loaves";
         }
