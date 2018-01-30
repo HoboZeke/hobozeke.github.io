@@ -200,7 +200,6 @@ window.setInterval(function()
         Reveal("seedsButton");
     }
     
-    Save();
 }, 1000);
 
 function Save ()
