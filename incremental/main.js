@@ -12,13 +12,22 @@ var oldFatPigeonsRevealed = 0;
 var flour = 0;
 var bread = 0;
 var breadRevealed = 0;
+var loadedGameState = 0;
 
 
 function setup()
 {
     Load();
-    Hide("seedsButton");
-    Hide("breadButton");
+    
+    if (loadedGameState == 0)
+    {
+        Hide("seedsButton");
+        Hide("breadButton");
+    }
+    else if (loadedGameState == 1)
+    {
+        UpdateLabels("pigeons");
+    }
     document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
 }
 
@@ -211,6 +220,7 @@ function Load ()
     fatPigeons = savegame.fatPigeons;
     oldFatPigeons = savegame.oldFatPigeons;
     if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+    if (pigeons >= 1){loadedGameState = 1}
 }
 
 function DeleteSave()
