@@ -144,43 +144,29 @@ function Hide(name)
 
 function UpdateLabels (type)
 {
-    if (type == "days")
-    {
-        document.getElementById("interval").innerHTML = interval;
-    }
+    if (type == "days"){
+        document.getElementById("interval").innerHTML = interval;}
     
-    if (type == "seeds")
-    {
+    if (type == "seeds"){
         document.getElementById("seeds").innerHTML = seeds;
-        document.getElementById('seedHarvesters').innerHTML = seedHarvesters;
-    }
+        document.getElementById('seedHarvesters').innerHTML = seedHarvesters;}
     
-    if (type == "flour")
-    {
+    if (type == "flour"){
         flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
         document.getElementById("flour").innerHTML = flour;
-        document.getElementById('seedGrinders').innerHTML = seedGrinders; 
+        document.getElementById('seedGrinders').innerHTML = seedGrinders;}
+    
+    if (type == "bread"){
+        if (breadRevealed == 1){
+            document.getElementById("bread").innerHTML = bread + " loaves";}
     }
     
-    if (type == "bread")
-    {
-        if (breadRevealed == 1)
-        {
-            document.getElementById("bread").innerHTML = bread + " loaves";
-        }
-    }
-    
-    if (type == "pigeons")
-    {
+    if (type == "pigeons"){
         document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
-        if (fatPigeonsRevealed == 1)
-        {
-            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";
-        }
-        if (oldFatPigeonsRevealed == 1)
-        {
-            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
-        }
+        if (fatPigeonsRevealed == 1){
+            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";}
+        if (oldFatPigeonsRevealed == 1){
+            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";}
     }
 }
 
@@ -215,7 +201,7 @@ function Load ()
 {
     var savegame = JSON.parse(localStorage.getItem("save"));
     seeds = savegame.seeds;
-    seedHarvesters = savgame.seedHarvesters;
+    seedHarvesters = savegame.seedHarvesters;
     flour = savegame.flour;
     seedGrinders = savegame.seedGrinders;
     interval = savegame.interval;
