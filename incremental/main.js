@@ -16,6 +16,7 @@ var breadRevealed = 0;
 
 function setup()
 {
+    Load();
     Hide("seedsButton");
     Hide("breadButton");
     document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
@@ -197,6 +198,8 @@ window.setInterval(function()
     {
         Reveal("seedsButton");
     }
+    
+    Save();
 }, 1000);
 
 function Save ()
@@ -211,6 +214,15 @@ function Save ()
 function Load ()
 {
     var savegame = JSON.parse(localStorage.getItem("save"));
+    seeds = savegame.seeds;
+    seedHarvesters = savgame.seedHarvesters;
+    flour = savegame.flour;
+    seedGrinders = savegame.seedGrinders;
+    interval = savegame.interval;
+    bread = savegame.bread;
+    pigeons = savegame.pigeons;
+    fatPigeons = savegame.fatPigeons;
+    oldFatPigeons = savegame.oldFatPigeons;
     if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 }
 
