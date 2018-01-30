@@ -17,12 +17,8 @@ var breadRevealed = 0;
 function setup()
 {
     Load();
-    if(seedHarvesters == 0){
-        Hide("seedsButton");
-    }
-    if(breadRevealed == 0){
-        Hide("breadButton");
-    }
+    Hide("seedsButton");
+    Hide("breadButton");
     document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
     UpdateLabels("all");
 }
