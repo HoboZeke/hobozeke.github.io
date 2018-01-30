@@ -17,9 +17,14 @@ var breadRevealed = 0;
 function setup()
 {
     Load();
-    Hide("seedsButton");
-    Hide("breadButton");
+    if(seedHarvesters == 0){
+        Hide("seedsButton");
+    }
+    if(breadRevealed == 0){
+        Hide("breadButton");
+    }
     document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
+    UpdateLabels("all");
 }
 
 function seedClick (number)
@@ -168,6 +173,22 @@ function UpdateLabels (type)
         if (oldFatPigeonsRevealed == 1){
             document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";}
     }
+    
+    if (type == "all"){
+        document.getElementById("interval").innerHTML = interval;
+        document.getElementById("seeds").innerHTML = seeds;
+        document.getElementById("seedHarvesters").innerHTML = seedHarvesters;
+        flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
+        document.getElementById("flour").innerHTML = flour;
+        document.getElementById("seedGrinders").innerHTML = seedGrinders;
+        if (breadRevealed == 1){
+            document.getElementById("bread").innerHTML = bread + " loaves";
+            document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
+        if (fatPigeonsRevealed == 1){
+            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";}
+        if (oldFatPigeonsRevealed == 1){
+            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
+    }
 }
 
 window.setInterval(function()
@@ -192,7 +213,9 @@ function Save ()
 {
     var save = {seeds: seeds, seedHarvesters: seedHarvesters, flour: flour,
             seedGrinders: seedGrinders, interval: interval, bread: bread,
-            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons}
+            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons,
+            persistantPigeons: persistantPigeons, breadRevealed: breadRevealed,
+            fatPigeonsRevealed: fatPigeonsRevealed, oldFatPigeonsRevealed: oldFatPigeonsRevealed}
     
     localStorage.setItem("save",JSON.stringify(save));
 }
@@ -209,6 +232,10 @@ function Load ()
     pigeons = savegame.pigeons;
     fatPigeons = savegame.fatPigeons;
     oldFatPigeons = savegame.oldFatPigeons;
+    persistantPigeons = savegame.persistantPigeons;
+    breadRevealed = savegame.breadRevealed;
+    fatPigeonsRevealed = savegame.fatPigeonsRevealed;
+    oldFatPigeonsRevealed = savegame.oldFatPigeonsRevealed;
     if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 }
 
