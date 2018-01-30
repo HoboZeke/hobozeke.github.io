@@ -13,6 +13,7 @@ var flour = 0;
 var bread = 0;
 var breadRevealed = 0;
 
+
 function setup()
 {
     Hide("seedsButton");
@@ -197,3 +198,23 @@ window.setInterval(function()
         Reveal("seedsButton");
     }
 }, 1000);
+
+function Save ()
+{
+    var save = {seeds: seeds, seedHarvesters: seedHarvesters, flour: flour,
+            seedGrinders: seedGrinders, interval: interval, bread: bread,
+            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons}
+    
+    localStorage.setItem("save",JSON.stringify(save));
+}
+
+function Load ()
+{
+    var savegame = JSON.parse(localStorage.getItem("save"));
+    if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+}
+
+function DeleteSave()
+{
+    localStorage.removeItem("save")
+}
