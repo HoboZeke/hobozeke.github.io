@@ -206,9 +206,7 @@ function Save ()
 {
     var save = {seeds: seeds, seedHarvesters: seedHarvesters, flour: flour,
             seedGrinders: seedGrinders, interval: interval, bread: bread,
-            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons,
-            persistantPigeons: persistantPigeons, breadRevealed: breadRevealed,
-            fatPigeonsRevealed: fatPigeonsRevealed, oldFatPigeonsRevealed: oldFatPigeonsRevealed}
+            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons}
     
     localStorage.setItem("save",JSON.stringify(save));
 }
@@ -225,10 +223,6 @@ function Load ()
     pigeons = savegame.pigeons;
     fatPigeons = savegame.fatPigeons;
     oldFatPigeons = savegame.oldFatPigeons;
-    persistantPigeons = savegame.persistantPigeons;
-    breadRevealed = savegame.breadRevealed;
-    fatPigeonsRevealed = savegame.fatPigeonsRevealed;
-    oldFatPigeonsRevealed = savegame.oldFatPigeonsRevealed;
     if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 }
 
