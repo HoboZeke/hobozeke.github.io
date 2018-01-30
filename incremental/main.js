@@ -16,7 +16,6 @@ var breadRevealed = 0;
 
 function setup()
 {
-    Load();
     Hide("seedsButton");
     Hide("breadButton");
     document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
