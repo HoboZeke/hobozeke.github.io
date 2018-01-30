@@ -167,22 +167,6 @@ function UpdateLabels (type)
         if (oldFatPigeonsRevealed == 1){
             document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";}
     }
-    
-    if (type == "all"){
-        document.getElementById("interval").innerHTML = interval;
-        document.getElementById("seeds").innerHTML = seeds;
-        document.getElementById("seedHarvesters").innerHTML = seedHarvesters;
-        flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
-        document.getElementById("flour").innerHTML = flour;
-        document.getElementById("seedGrinders").innerHTML = seedGrinders;
-        if (breadRevealed == 1){
-            document.getElementById("bread").innerHTML = bread + " loaves";
-            document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
-        if (fatPigeonsRevealed == 1){
-            document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";}
-        if (oldFatPigeonsRevealed == 1){
-            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";
-    }
 }
 
 window.setInterval(function()
