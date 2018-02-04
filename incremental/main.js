@@ -1,6 +1,6 @@
 var money = 0;
 var seeds = 0;				var seedHarvesters = 0;		
-var pigeons = 0;			var pigeonDifference = 0;	var persistantPigeons = 0;
+var pigeons = 0;			var pigeonDifference = 0;		var persistantPigeons = 0;
 var fatPigeons = 0;			var fatPigeonsRevealed = 0;
 var oldFatPigeons = 0;			var oldFatPigeonsRevealed = 0;
 var flour = 0;				var seedGrinders = 0;
@@ -50,7 +50,7 @@ function flourClick (number)
 function moneyClick (number)
 {
 	var gain = Math.Random()*number;
-	gain = Math.round(gain*100)/100;
+	//gain = Math.round(gain*100)/100;
 	money = money+gain;
 	UpdateLabels("money");
 }
