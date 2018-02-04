@@ -50,7 +50,6 @@ function flourClick (number)
 function moneyClick (number)
 {
 	var gain = Math.random()*number;
-	//gain = Math.round(gain*100)/100;
 	money = money+gain;
 	UpdateLabels("money");
 }
