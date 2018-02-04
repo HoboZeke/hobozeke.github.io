@@ -220,29 +220,46 @@ function Save ()
     var save = {seeds: seeds, seedHarvesters: seedHarvesters, flour: flour,
             seedGrinders: seedGrinders, interval: interval, bread: bread,
             pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons, money:money}
-    
-    localStorage.setItem("save",JSON.stringify(save));
+	
+	localStorage.setItem('seeds',seeds);
+	localStorage.setItem('seedHarvesters',seedHarvesters);
+	localStorage.setItem('flour',flour);
+	localStorage.setItem('seedGrinders',seedGrinders);
+	localStorage.setItem('interval',interval);
+	localStorage.setItem('bread',bread);
+	localStorage.setItem('pigeons',pigeons);
+	localStorage.setItem('fatPigeons',fatPigeons);
+	localStorage.setItem('oldFatPigeons',oldFatPigeons);
+	localStorage.setItem('money',money);
 }
 
 function Load ()
 {
-    var savegame = JSON.parse(localStorage.getItem("save"));
-    seeds = savegame.seeds;
-    seedHarvesters = savegame.seedHarvesters;
-    flour = savegame.flour;
-    seedGrinders = savegame.seedGrinders;
-    interval = savegame.interval;
-    bread = savegame.bread;
-    pigeons = savegame.pigeons;
-    fatPigeons = savegame.fatPigeons;
-    oldFatPigeons = savegame.oldFatPigeons;
-	money = savegame.money;
-    if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+    
+    seeds = localStorage.getItem("seeds");
+    seedHarvesters = localStorage.getItem("seedHarvesters");
+    flour = localStorage.getItem("flour");
+    seedGrinders = localStorage.getItem("seedGrinders");
+    interval = localStorage.getItem("interval");
+    bread = localStorage.getItem("bread");
+    pigeons = localStorage.getItem("pigeons");
+    fatPigeons = localStorage.getItem("fatPigeons");
+    oldFatPigeons = localStorage.getItem("oldFatPigeons");
+	money = localStorage.getItem("money");
     if (pigeons >= 1){loadedGameState = 1}
 }
 
 function DeleteSave()
 {
-    localStorage.removeItem("save");
+    localStorage.removeItem("seeds");
+	localStorage.removeItem("seedHarvesters");
+	localStorage.removeItem("flour");
+	localStorage.removeItem("seedGrinders");
+	localStorage.removeItem("interval");
+	localStorage.removeItem("bread");
+	localStorage.removeItem("pigeons");
+	localStorage.removeItem("fatPigeons");
+	localStorage.removeItem("oldFatPigeons");
+	localStorage.removeItem("money");
     setup();
 }
