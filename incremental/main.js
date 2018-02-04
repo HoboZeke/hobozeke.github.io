@@ -54,7 +54,7 @@ function moneyClick (number)
 	gain = Math.round(gain*100)/100;
 	money = money + gain;
 	UpdateLabels("money");
-	document.getElementById("story").innerHTML = "A kind stranger comes and gives you £"+gain;
+	document.getElementById("story").innerHTML = "A kind stranger comes and gives you £"+gain.toFixed(2);
 }
 
 function buySeedHarvester()
