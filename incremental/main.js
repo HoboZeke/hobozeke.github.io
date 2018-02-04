@@ -170,7 +170,7 @@ function UpdateLabels (type)
         document.getElementById("interval").innerHTML = interval;}
 	
 	if (type == "money"){
-        document.getElementById("money").innerHTML = money;}
+        document.getElementById("money").innerHTML = money.toFixed(2);}
     
     if (type == "seeds"){
         document.getElementById("seeds").innerHTML = seeds;
@@ -178,7 +178,7 @@ function UpdateLabels (type)
     
     if (type == "flour"){
         flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
-        document.getElementById("flour").innerHTML = flour;
+        document.getElementById("flour").innerHTML = flour.toFixed(2);
         document.getElementById('seedGrinders').innerHTML = seedGrinders;}
     
     if (type == "bread"){
