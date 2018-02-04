@@ -19,6 +19,10 @@ function setup()
 {
     Load();
     
+    UpdateLabels("seeds");
+    UpdateLabels("flour");
+    UpdateLabels("days"); 
+    
     if (loadedGameState == 0)
     {
         Hide("seedsButton");
@@ -35,10 +39,6 @@ function setup()
         document.getElementById("harvesterCost").innerHTML = nextHCost;
         document.getElementById("story").innerHTML = "You return to your park bench."
     }
-    
-    UpdateLabels("seeds");
-    UpdateLabels("flour");
-    UpdateLabels("days"); 
 }
 
 function seedClick (number)
