@@ -242,5 +242,5 @@ function Load ()
 function DeleteSave()
 {
     localStorage.removeItem("save");
-    Load();
+    setup();
 }
