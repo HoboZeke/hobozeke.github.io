@@ -49,7 +49,8 @@ function flourClick (number)
 }
 function moneyClick (number)
 {
-	var gain = getRandom();
+	var gain = Math.random()*number;
+	gain = Math.round(gain*100)/100;
 	money = money + gain;
 	UpdateLabels("money");
 }
@@ -81,10 +82,6 @@ function buySeedGrinders()
 function getRandomInt(max) 
 {
   return Math.floor(Math.random() * Math.floor(max));
-}
-function getRandom() 
-{
-  return Math.random();
 }
 
 function throwSeeds()
@@ -173,7 +170,7 @@ function UpdateLabels (type)
         document.getElementById("interval").innerHTML = interval;}
 	
 	if (type == "money"){
-        document.getElementById("money").innerHTML = interval;}
+        document.getElementById("money").innerHTML = money;}
     
     if (type == "seeds"){
         document.getElementById("seeds").innerHTML = seeds;
