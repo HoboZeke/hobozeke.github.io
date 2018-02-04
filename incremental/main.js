@@ -49,7 +49,7 @@ function flourClick (number)
 }
 function moneyClick (number)
 {
-	var gain = getRandom()*number;
+	var gain = getRandom();
 	money = money + gain;
 	UpdateLabels("money");
 }
