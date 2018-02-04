@@ -33,7 +33,7 @@ function setup()
         document.getElementById('grinderCost').innerHTML = nextGCost; 
         var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
         document.getElementById("harvesterCost").innerHTML = nextHCost;
-        document.getElementById("story").innerHTML = "You return to your park bench."
+        document.getElementById("story").innerHTML = "You return to your park bench.";
     }
 }
 
@@ -53,6 +53,7 @@ function moneyClick (number)
 	gain = Math.round(gain*100)/100;
 	money = money + gain;
 	UpdateLabels("money");
+	document.getElementById("story").innerHTML = "A kind stranger comes and gives you £"+gain;
 }
 
 function buySeedHarvester()
