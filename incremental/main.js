@@ -1,17 +1,11 @@
-var seeds = 0;
-var seedHarvesters = 0;
-var seedGrinders = 0;
-var pigeons = 0;
-var pigeonDifference = 0;
-var persistantPigeons = 0;
+var money = 0;
+var seeds = 0;									var seedHarvesters = 0;		
+var pigeons = 0;								var pigeonDifference = 0;	var persistantPigeons = 0;
+var fatPigeons = 0;								var fatPigeonsRevealed = 0;
+var oldFatPigeons = 0;							var oldFatPigeonsRevealed = 0;
+var flour = 0;									var seedGrinders = 0;
+var bread = 0;									var breadRevealed = 0;
 var interval = 1;
-var fatPigeons = 0;
-var oldFatPigeons = 0;
-var fatPigeonsRevealed = 0;
-var oldFatPigeonsRevealed = 0;
-var flour = 0;
-var bread = 0;
-var breadRevealed = 0;
 var loadedGameState = 0;
 
 
@@ -53,29 +47,36 @@ function flourClick (number)
     flour = flour+number;
     UpdateLabels("flour");
 }
+function moneyClick (number)
+{
+	var gain = getRandomInt(number);
+	gain = Math.round(gain*100)/100;
+	money = money+gain;
+	UpdateLabels("money");
+}
 
 function buySeedHarvester()
 {
-    var harvesterCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         //works out the cost of this cursor
+    var harvesterCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         	//works out the cost of this cursor
     if(seeds >= harvesterCost){                                                 //checks that the player can afford the cursor
-        seedHarvesters = seedHarvesters + 1;                                   //increases number of cursors
-    	seeds = seeds - harvesterCost;                                           //removes the cookies spent
-        UpdateLabels("seeds");                                                //updates the number of cookies for the user
+        seedHarvesters = seedHarvesters + 1;                                   	//increases number of cursors
+    	seeds = seeds - harvesterCost;                                          //removes the cookies spent
+        UpdateLabels("seeds");                                                	//updates the number of cookies for the user
     }
-    var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       //works out the cost of the next cursor
-    document.getElementById('harvesterCost').innerHTML = nextCost;               //updates the cursor cost for the user
+    var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));               //works out the cost of the next cursor
+    document.getElementById('harvesterCost').innerHTML = nextCost;              //updates the cursor cost for the user
 }
 
 function buySeedGrinders()
 {
-    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         //works out the cost of this cursor
-    if(flour >= grinderCost){                                                 //checks that the player can afford the cursor
-        seedGrinders = seedGrinders + 1;                                   //increases number of cursors
-    	flour = flour - grinderCost;                                              //removes the cookies spent
-        UpdateLabels("flour");                                                //updates the number of cookies for the user
+    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         		//works out the cost of this cursor
+    if(flour >= grinderCost){                                                 	//checks that the player can afford the cursor
+        seedGrinders = seedGrinders + 1;                                   		//increases number of cursors
+    	flour = flour - grinderCost;                                            //removes the cookies spent
+        UpdateLabels("flour");                                                	//updates the number of cookies for the user
     }
-    var nextCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       //works out the cost of the next cursor
-    document.getElementById('grinderCost').innerHTML = nextCost;               //updates the cursor cost for the user
+    var nextCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                 //works out the cost of the next cursor
+    document.getElementById('grinderCost').innerHTML = nextCost;               	//updates the cursor cost for the user
 }
 
 function getRandomInt(max) 
@@ -90,7 +91,7 @@ function throwSeeds()
     var pigeonHunger = getRandomInt(5) + 1;
     pigeons = Math.floor(seeds/5);
     seeds = 0;
-    if(interval == 1)
+    if(interval == 1)																//Set the original pigeon count on day 1
     {
         persistantPigeons = pigeons;
     }
@@ -167,6 +168,9 @@ function UpdateLabels (type)
 {
     if (type == "days"){
         document.getElementById("interval").innerHTML = interval;}
+	
+	if (type == "money"){
+        document.getElementById("money").innerHTML = interval;}
     
     if (type == "seeds"){
         document.getElementById("seeds").innerHTML = seeds;
