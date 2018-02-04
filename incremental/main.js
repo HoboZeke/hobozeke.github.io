@@ -33,6 +33,8 @@ function setup()
     {
         UpdateLabels("pigeons");
         if(bread>=1){breadRevealed = 1; UpdateLabels("bread");}
+        if(fatPigeons>=1){fatPigeonsRevealed = 1; UpdateLabels("pigeons");}
+        if(oldFatPigeons>=1){oldFatPigeonsRevealed = 1; UpdateLabels("pigeons");}
         var nextGCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       
         document.getElementById('grinderCost').innerHTML = nextGCost; 
         var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
