@@ -1,10 +1,10 @@
 var money = 0;
-var seeds = 0;									var seedHarvesters = 0;		
-var pigeons = 0;								var pigeonDifference = 0;	var persistantPigeons = 0;
-var fatPigeons = 0;								var fatPigeonsRevealed = 0;
-var oldFatPigeons = 0;							var oldFatPigeonsRevealed = 0;
-var flour = 0;									var seedGrinders = 0;
-var bread = 0;									var breadRevealed = 0;
+var seeds = 0;				var seedHarvesters = 0;		
+var pigeons = 0;			var pigeonDifference = 0;	var persistantPigeons = 0;
+var fatPigeons = 0;			var fatPigeonsRevealed = 0;
+var oldFatPigeons = 0;			var oldFatPigeonsRevealed = 0;
+var flour = 0;				var seedGrinders = 0;
+var bread = 0;				var breadRevealed = 0;
 var interval = 1;
 var loadedGameState = 0;
 
@@ -69,9 +69,9 @@ function buySeedHarvester()
 
 function buySeedGrinders()
 {
-    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         		//works out the cost of this cursor
+    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         	//works out the cost of this cursor
     if(flour >= grinderCost){                                                 	//checks that the player can afford the cursor
-        seedGrinders = seedGrinders + 1;                                   		//increases number of cursors
+        seedGrinders = seedGrinders + 1;                                   	//increases number of cursors
     	flour = flour - grinderCost;                                            //removes the cookies spent
         UpdateLabels("flour");                                                	//updates the number of cookies for the user
     }
