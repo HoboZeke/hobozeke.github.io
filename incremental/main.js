@@ -28,7 +28,7 @@ function setup()
     else if (loadedGameState == 1)
     {
         UpdateLabels("pigeons");
-        if(bread>=1){UpdateLabels("bread")};
+        if(bread>=1){breadRevealed = 1; UpdateLabels("bread");}
         var nextGCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       
         document.getElementById('grinderCost').innerHTML = nextGCost; 
         var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
