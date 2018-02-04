@@ -1,4 +1,4 @@
-var money = 0;
+var money = 0;				var income = 0.25;
 var seeds = 0;				var seedHarvesters = 0;		
 var pigeons = 0;			var pigeonDifference = 0;		var persistantPigeons = 0;
 var fatPigeons = 0;			var fatPigeonsRevealed = 0;
