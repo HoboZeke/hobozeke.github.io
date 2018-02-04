@@ -49,8 +49,8 @@ function flourClick (number)
 }
 function moneyClick (number)
 {
-	var gain = Math.random()*number;
-	money = money+gain;
+	var gain = getRandom()*number;
+	money = money + gain;
 	UpdateLabels("money");
 }
 
@@ -81,6 +81,10 @@ function buySeedGrinders()
 function getRandomInt(max) 
 {
   return Math.floor(Math.random() * Math.floor(max));
+}
+function getRandom() 
+{
+  return Math.random();
 }
 
 function throwSeeds()
