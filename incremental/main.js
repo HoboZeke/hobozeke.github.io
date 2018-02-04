@@ -1,6 +1,6 @@
 var money = 0;					var income = 0.25;
-var seeds = 0;					var seedIncome = 1;				var seedHarvesters = 0;		
-var pigeons = 0;				var pigeonDifference = 0;		var persistantPigeons = 0;
+var seeds = 0;					var seedIncome = 1;					var seedHarvesters = 0;		
+var pigeons = 0;				var pigeonDifference = 0;			var persistantPigeons = 0;
 var fatPigeons = 0;				var fatPigeonsRevealed = 0;
 var oldFatPigeons = 0;			var oldFatPigeonsRevealed = 0;
 var flour = 0;					var seedGrinders = 0;
@@ -54,6 +54,7 @@ function moneyClick (number)
 	gain = Math.round(gain*100)/100;
 	money = money + gain;
 	UpdateLabels("money");
+	Reveal("story");
 	document.getElementById("story").innerHTML = "A kind stranger comes and gives you £"+gain.toFixed(2);
 }
 
