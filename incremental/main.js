@@ -32,9 +32,13 @@ function setup()
         var nextGCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       
         document.getElementById('grinderCost').innerHTML = nextGCost; 
         var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
-        document.getElementById('harvesterCost').innerHTML = nextHCost;
+        document.getElementById("harvesterCost").innerHTML = nextHCost;
         document.getElementById("story").innerHTML = "You return to your park bench."
     }
+    
+    UpdateLabels("seeds");
+    UpdateLabels("flour");
+    UpdateLabels("days"); 
 }
 
 function seedClick (number)
