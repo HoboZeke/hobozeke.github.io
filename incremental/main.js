@@ -16,6 +16,7 @@ function setup()
     UpdateLabels("seeds");
     UpdateLabels("flour");
     UpdateLabels("days"); 
+	UpdateLabels("money");
     
     if (loadedGameState == 0)
     {
@@ -217,10 +218,6 @@ window.setInterval(function()
 
 function Save ()
 {
-    var save = {seeds: seeds, seedHarvesters: seedHarvesters, flour: flour,
-            seedGrinders: seedGrinders, interval: interval, bread: bread,
-            pigeons: pigeons, fatPigeons:fatPigeons, oldFatPigeons: oldFatPigeons, money:money}
-	
 	localStorage.setItem('seeds',seeds);
 	localStorage.setItem('seedHarvesters',seedHarvesters);
 	localStorage.setItem('flour',flour);
@@ -231,6 +228,7 @@ function Save ()
 	localStorage.setItem('fatPigeons',fatPigeons);
 	localStorage.setItem('oldFatPigeons',oldFatPigeons);
 	localStorage.setItem('money',money);
+	localStorage.setItem('persistantPigeons',persistantPigeons);
 }
 
 function Load ()
@@ -246,6 +244,7 @@ function Load ()
     fatPigeons = localStorage.getItem("fatPigeons");
     oldFatPigeons = localStorage.getItem("oldFatPigeons");
 	money = localStorage.getItem("money");
+	peristantPigeons = localStorage.getItem("persistantPigeons");
     if (pigeons >= 1){loadedGameState = 1}
 }
 
@@ -261,5 +260,6 @@ function DeleteSave()
 	localStorage.removeItem("fatPigeons");
 	localStorage.removeItem("oldFatPigeons");
 	localStorage.removeItem("money");
+	localStorage.removeItem("persistantPigeons");
     setup();
 }
