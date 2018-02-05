@@ -123,6 +123,11 @@ function throwSeeds()
         interval = 1;
         if (fatPigeons >= 1){fatPigeonsRevealed = 1;}
     }
+	
+	if (pigeons >= 100)
+	{
+		StoryStage(1);
+	}
     
     UpdateLabels("seeds");
     UpdateLabels("bread");
@@ -152,6 +157,15 @@ function bakeBread ()
         UpdateLabels("flour");
         UpdateLabels("bread");
     }
+}
+
+function StoryStage(stage)
+{
+	if (stage == 1)
+	{
+		income += 0.25;
+		document.getElementById("story").innerHTML = "The amount of pigeons flocking to you each day seems to have increased peoples generosity.";
+	}
 }
 
 function Reveal(name) 
