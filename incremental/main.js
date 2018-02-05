@@ -126,6 +126,7 @@ function throwSeeds()
 	
 	if (pigeons >= 100)
 	{
+		Reveal("story");
 		StoryStage(1);
 	}
     
