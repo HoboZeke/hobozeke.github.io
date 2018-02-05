@@ -250,17 +250,17 @@ function Save ()
 function Load ()
 {
     
-    seeds = localStorage.getItem("seeds");
-    seedHarvesters = localStorage.getItem("seedHarvesters");
-    flour = localStorage.getItem("flour");
-    seedGrinders = localStorage.getItem("seedGrinders");
-    interval = localStorage.getItem("interval");
-    bread = localStorage.getItem("bread");
-    pigeons = localStorage.getItem("pigeons");
-    fatPigeons = localStorage.getItem("fatPigeons");
-    oldFatPigeons = localStorage.getItem("oldFatPigeons");
-	money = localStorage.getItem("money");
-	peristantPigeons = localStorage.getItem("persistantPigeons");
+    seeds = Number(localStorage.getItem("seeds"));
+    seedHarvesters = Number(localStorage.getItem("seedHarvesters"));
+    flour = Number(localStorage.getItem("flour"));
+    seedGrinders = Number(localStorage.getItem("seedGrinders"));
+    interval = Number(localStorage.getItem("interval"));
+    bread = Number(localStorage.getItem("bread"));
+    pigeons = Number(localStorage.getItem("pigeons"));
+    fatPigeons = Number(localStorage.getItem("fatPigeons"));
+    oldFatPigeons = Number(localStorage.getItem("oldFatPigeons"));
+	money = Number(localStorage.getItem("money"));
+	peristantPigeons = Number(localStorage.getItem("persistantPigeons"));
     if (pigeons >= 1){loadedGameState = 1}
 }
 
