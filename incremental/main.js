@@ -7,6 +7,7 @@ var flour = 0;					var seedGrinders = 0;
 var bread = 0;					var breadRevealed = 0;
 var interval = 1;	
 var loadedGameState = 0;
+var pigeonThreshold = 100;
 
 
 function setup()
@@ -128,8 +129,9 @@ function throwSeeds()
         if (fatPigeons >= 1){fatPigeonsRevealed = 1;}
     }
 	
-	if (pigeons >= 100)
+	if (pigeons >=  pigeonThreshold)
 	{
+		pigeonThreshold += pigeonThreshold*0.5;
 		StoryStage(1);
 	}
     
