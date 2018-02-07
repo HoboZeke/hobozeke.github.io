@@ -17,6 +17,10 @@
 <body>
  <body onload="setup()">
   Day: <span id="interval">1</span>  <br/>
+  <button onClick = "throwSeeds()">Throw Seeds to Pigeons</button> <br/>
+  <span id="pigeons"></span> <br/>
+  <span id="fatPigeons"></span> <br/>
+  <span id="oldFatPigeons"></span> <br/>
   <br/>
   Seeds: <span id = "seeds">0</span> <br/>
   <div id="seedSection">
@@ -27,11 +31,7 @@
   Cost: £<span id="harvesterCost">2</span> <br/>
   <button onClick = "buySeedHarvester()">Buy Bush</button> <br/>
    </div>
-  <br/>
-  <button onClick = "throwSeeds()">Throw Seeds to Pigeons</button> <br/>
-  <span id="pigeons"></span> <br/>
-  <span id="fatPigeons"></span> <br/>
-  <span id="oldFatPigeons"></span> <br/>
+  
   </br></br></br></br></br>
 <button onClick = "DeleteSave()">Delete Save</button>
   <script type="text/javascript" src="main.js"></script>
@@ -43,7 +43,7 @@
     Money: £<span id= "money">0</span>      
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
     <button onClick = "moneyClick(income)">Beg</button>
-    <br/><br/>
+    <br/><br/><br/><br/><br/><br/>
     <div id="flourButton">
     <span id="flour">0</span>g of flour<br/>
    <button onClick = "groundSeedsIntoFlour()">Grind Seeds into Flour</button> <br/>  
