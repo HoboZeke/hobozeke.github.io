@@ -89,6 +89,7 @@ function getRandomInt(max)
 
 function throwSeeds()
 {
+	Hide("story");						//Put this here to allow events later in list to create story items.
     var previousPigeons = pigeons;
     
     var pigeonHunger = getRandomInt(5) + 1;
@@ -132,9 +133,7 @@ function throwSeeds()
     UpdateLabels("seeds");
     UpdateLabels("bread");
     UpdateLabels("days"); 
-    UpdateLabels("pigeons");
-    Hide("story");
-       
+    UpdateLabels("pigeons");       
 }
 
 function groundSeedsIntoFlour ()
