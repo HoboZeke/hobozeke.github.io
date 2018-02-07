@@ -272,7 +272,7 @@ function Load ()
 
 function DeleteSave()
 {
-    localStorage.removeItem("seeds");
+    	localStorage.removeItem("seeds");
 	localStorage.removeItem("seedHarvesters");
 	localStorage.removeItem("flour");
 	localStorage.removeItem("seedGrinders");
@@ -283,5 +283,6 @@ function DeleteSave()
 	localStorage.removeItem("oldFatPigeons");
 	localStorage.removeItem("money");
 	localStorage.removeItem("persistantPigeons");
+	localStorage.removeItem("pigeonThreshold");
     setup();
 }
