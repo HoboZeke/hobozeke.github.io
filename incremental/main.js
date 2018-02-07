@@ -126,7 +126,6 @@ function throwSeeds()
 	
 	if (pigeons >= 100)
 	{
-		Reveal("story");
 		StoryStage(1);
 	}
     
@@ -165,6 +164,7 @@ function StoryStage(stage)
 	if (stage == 1)
 	{
 		income += 0.25;
+		Reveal("story");
 		document.getElementById("story").innerHTML = "The amount of pigeons flocking to you each day seems to have increased peoples generosity.";
 	}
 }
