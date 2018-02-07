@@ -20,6 +20,7 @@ function setup()
     
     if (loadedGameState == 0)
     {
+		seeds = 25;
 		Hide("seedSection");
         Hide("flourButton");
         Hide("breadButton");
