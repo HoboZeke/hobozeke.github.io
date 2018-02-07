@@ -169,7 +169,7 @@ function StoryStage(stage)
 	{
 		income += 0.25;
 		Reveal("story");
-		document.getElementById("story").innerHTML = "The amount of pigeons flocking to you each day seems to have increased peoples generosity.";
+		document.getElementById("story").innerHTML = "The amount of pigeons flocking to you each day <br/> seems to have increased peoples generosity.";
 	}
 }
 
