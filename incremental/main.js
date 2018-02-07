@@ -222,7 +222,7 @@ window.setInterval(function()
     seedClick(seedHarvesters);
     flourClick(seedGrinders);
 	
-	money += oldFatPigeons;
+	money += oldFatPigeons/100;
 	UpdateLabels("money");
     
     if (flour >= 100)
