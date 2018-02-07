@@ -35,7 +35,7 @@ function setup()
         if(oldFatPigeons>=1){oldFatPigeonsRevealed = 1; UpdateLabels("pigeons");}
         var nextGCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       
         document.getElementById('grinderCost').innerHTML = nextGCost; 
-        var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
+        var nextHCost = Math.floor(2 * Math.pow(1.1,seedHarvesters));                       
         document.getElementById("harvesterCost").innerHTML = nextHCost;
         document.getElementById("story").innerHTML = "You return to your park bench.";
     }
