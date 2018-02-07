@@ -249,6 +249,7 @@ function Save ()
 	localStorage.setItem('oldFatPigeons',oldFatPigeons);
 	localStorage.setItem('money',money);
 	localStorage.setItem('persistantPigeons',persistantPigeons);
+	localStorage.setItem('pigeonThreshold',pigeonThreshold);
 }
 
 function Load ()
@@ -265,6 +266,7 @@ function Load ()
     oldFatPigeons = Number(localStorage.getItem("oldFatPigeons"));
 	money = Number(localStorage.getItem("money"));
 	peristantPigeons = Number(localStorage.getItem("persistantPigeons"));
+	pigeonThreshold = Number(localStorage.getItem("pigeonThreshold"));
     if (pigeons >= 1){loadedGameState = 1}
 }
 
