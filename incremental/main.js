@@ -1,5 +1,5 @@
 var money = 0;					var income = 0.25;
-var seeds = 0;					var seedIncome = 1;					var seedHarvesters = 0;		
+var seeds = 25;					var seedIncome = 1;					var seedHarvesters = 0;		
 var pigeons = 0;				var pigeonDifference = 0;			var persistantPigeons = 0;
 var fatPigeons = 0;				var fatPigeonsRevealed = 0;
 var oldFatPigeons = 0;			var oldFatPigeonsRevealed = 0;
@@ -20,7 +20,8 @@ function setup()
     
     if (loadedGameState == 0)
     {
-        Hide("seedsButton");
+		Hide("seedSection");
+        Hide("flourButton");
         Hide("breadButton");
         document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
     }
@@ -89,6 +90,7 @@ function getRandomInt(max)
 
 function throwSeeds()
 {
+	Reveal("seedSection");
 	Hide("story");						//Put this here to allow events later in list to create story items.
     var previousPigeons = pigeons;
     
@@ -224,7 +226,7 @@ window.setInterval(function()
     
     if (seeds >= 50)
     {
-        Reveal("seedsButton");
+        Reveal("flourButton");
     }
     
     Save();
