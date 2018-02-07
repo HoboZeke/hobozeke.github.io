@@ -74,9 +74,9 @@ function buySeedHarvester()
 
 function buySeedGrinders()
 {
-    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         	//works out the cost of this cursor
+    var grinderCost = Math.floor(10 * Math.pow(1.1,seedGrinders));         		//works out the cost of this cursor
     if(flour >= grinderCost){                                                 	//checks that the player can afford the cursor
-        seedGrinders = seedGrinders + 1;                                   	//increases number of cursors
+        seedGrinders = seedGrinders + 1;                                  	 	//increases number of cursors
     	flour = flour - grinderCost;                                            //removes the cookies spent
         UpdateLabels("flour");                                                	//updates the number of cookies for the user
     }
@@ -92,7 +92,7 @@ function getRandomInt(max)
 function throwSeeds()
 {
 	Reveal("seedSection");
-	Hide("story");						//Put this here to allow events later in list to create story items.
+	Hide("story");																	//Put this here to allow events later in list to create story items.
     var previousPigeons = pigeons;
     
     var pigeonHunger = getRandomInt(5) + 1;
