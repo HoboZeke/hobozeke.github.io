@@ -63,13 +63,13 @@ function moneyClick (number)
 
 function buySeedHarvester()
 {
-    var harvesterCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));         	//works out the cost of this cursor
+    var harvesterCost = Math.floor(2 * Math.pow(1.1,seedHarvesters));         	//works out the cost of this cursor
     if(money >= harvesterCost){                                                 //checks that the player can afford the cursor
         seedHarvesters = seedHarvesters + 1;                                   	//increases number of cursors
     	money = money - harvesterCost;                                          //removes the cookies spent
         UpdateLabels("money");                                                	//updates the number of cookies for the user
     }
-    var nextCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));               //works out the cost of the next cursor
+    var nextCost = Math.floor(2 * Math.pow(1.1,seedHarvesters));               //works out the cost of the next cursor
     document.getElementById('harvesterCost').innerHTML = nextCost;              //updates the cursor cost for the user
 }
 
