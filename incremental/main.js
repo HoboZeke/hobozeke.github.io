@@ -213,7 +213,7 @@ function UpdateLabels (type)
         if (fatPigeonsRevealed == 1){
             document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";}
         if (oldFatPigeonsRevealed == 1){
-            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons";}
+            document.getElementById("oldFatPigeons").innerHTML = oldFatPigeons + " old fat pigeons pilfering pennies";}
     }
 }
 
@@ -221,6 +221,9 @@ window.setInterval(function()
 {
     seedClick(seedHarvesters);
     flourClick(seedGrinders);
+	
+	money += oldFatPigeons;
+	UpdateLabels("money");
     
     if (flour >= 100)
     {
