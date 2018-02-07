@@ -1,5 +1,3 @@
-"editor.tabSize": 4
-
 var money = 0;					var income = 0.25;
 var seeds = 25;					var seedIncome = 1;					var seedHarvesters = 0;		
 var pigeons = 0;				var pigeonDifference = 0;			var persistantPigeons = 0;
