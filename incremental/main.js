@@ -173,6 +173,16 @@ function StoryStage(stage)
 	}
 }
 
+function buyUpgrade(upgrade)
+{
+	if(upgrade = "gloves")
+	{
+		seedIncome += 1;
+		money = money - 0.5;
+		UpdateLabels("money");
+	}
+}
+
 function Reveal(name) 
 {
     var x = document.getElementById(name);
