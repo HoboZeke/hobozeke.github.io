@@ -3,9 +3,13 @@
 }
 #column1 {
   float: left ;
-  width: 50% ;
+  width: 33% ;
 }
 #column2 {
   float: left;
-  width: 50%;
+  width: 33%;
+}
+#column3 {
+  float: left;
+  width: 33%;
 }
