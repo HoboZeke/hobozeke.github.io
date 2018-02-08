@@ -175,10 +175,10 @@ function StoryStage(stage)
 
 function buyUpgrade(upgrade)
 {
-	if(upgrade == "gloves" && money >= 0.5)
+	if(upgrade == "gloves")
 	{
 		seedIncome += 1;
-		money = money - 0.5;
+		money -= 0.5;
 		UpdateLabels("money");
 	}
 }
