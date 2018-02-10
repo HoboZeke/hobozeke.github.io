@@ -40,7 +40,7 @@ function setup()
         	document.getElementById("story").innerHTML = "You return to your park bench.";
     	}
 	
-	if (pigeomThreshold <= 99)
+	if (pigeonThreshold <= 99)
 	{
 		pigeonThreshold = 100;
 	}
