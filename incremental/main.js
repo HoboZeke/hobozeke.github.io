@@ -181,7 +181,8 @@ function StoryStage(stage)
 
 function buyUpgrade(upgrade)
 {
-	if(upgrade == "gloves")
+	// 1 = fingerless gloves,
+	if(upgrade == 1 && money >= 0.5)
 	{
 		seedIncome += 1;
 		money -= 0.5;
