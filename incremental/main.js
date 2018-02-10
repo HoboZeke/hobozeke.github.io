@@ -22,7 +22,6 @@ function setup()
     	if (loadedGameState == 0)
     	{
 		seeds = 25;
-		pigeonThreshold = 100;
 		Hide("seedSection");
         	Hide("flourButton");
         	Hide("breadButton");
@@ -40,6 +39,11 @@ function setup()
         	document.getElementById("harvesterCost").innerHTML = nextHCost;
         	document.getElementById("story").innerHTML = "You return to your park bench.";
     	}
+	
+	if (pigeomThreshold <= 99)
+	{
+		pigeonThreshold = 100;
+	}
 }
 
 function seedClick (number)
