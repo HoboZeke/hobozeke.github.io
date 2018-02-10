@@ -131,7 +131,7 @@ function throwSeeds()
 	
 	if (pigeons >=  pigeonThreshold)
 	{
-		pigeonThreshold += pigeonThreshold/2;
+		pigeonThreshold = pigeonThreshold*1.5;
 		StoryStage(1);
 	}
     
