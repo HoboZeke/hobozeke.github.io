@@ -40,8 +40,8 @@ function setup()
 		var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
 		document.getElementById("harvesterCost").innerHTML = nextHCost;
 		document.getElementById("story").innerHTML = "You return to your park bench.";
-		if(flour >= 0 || seedGrinders >= 0){Reveal("flourButton")}
-		if(bread >=0){Reveal("breadButton")}
+		if(flour > 0 || seedGrinders > 0){Reveal("flourButton")}
+		if(bread > 0){Reveal("breadButton")}
 	}
 
 	if (pigeonThreshold <= 99)
