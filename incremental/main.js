@@ -7,7 +7,7 @@ var flour = 0;					var seedGrinders = 0;
 var bread = 0;					var breadRevealed = 0;
 var interval = 1;	
 var loadedGameState = 0;
-var pigeonThreshold = 100;
+var pigeonThreshold = 0;
 
 
 function setup()
@@ -22,6 +22,7 @@ function setup()
     	if (loadedGameState == 0)
     	{
 		seeds = 25;
+		pigeonThreshold = 100;
 		Hide("seedSection");
         	Hide("flourButton");
         	Hide("breadButton");
