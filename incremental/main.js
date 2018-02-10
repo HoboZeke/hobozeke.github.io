@@ -18,15 +18,15 @@ function setup()
 	UpdateLabels("flour");
 	UpdateLabels("days"); 
 	UpdateLabels("money");
+	Hide("seedSection");
+	Hide("flourButton");
+	Hide("breadButton");
+	Hide("upgrades");
 
 	if (loadedGameState == 0)
 	{
 		seeds = 25;
 		pigeonThreshold = 100;
-		Hide("seedSection");
-		Hide("flourButton");
-		Hide("breadButton");
-		Hide("upgrades");
 		document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
 	}
 	else if (loadedGameState == 1)
@@ -40,8 +40,8 @@ function setup()
 		var nextHCost = Math.floor(10 * Math.pow(1.1,seedHarvesters));                       
 		document.getElementById("harvesterCost").innerHTML = nextHCost;
 		document.getElementById("story").innerHTML = "You return to your park bench.";
-		if(flour >= 0 || seedGrinders >= 0){Hide("flourButton")}
-		if(bread >=0){Hide("breadButton")}
+		if(flour >= 0 || seedGrinders >= 0){Reveal("flourButton")}
+		if(bread >=0){Reveal("breadButton")}
 	}
 
 	if (pigeonThreshold <= 99)
