@@ -13,65 +13,67 @@
    </body>
   </div>
  
-  <div id="column1">
+<div id="column1">
 <body>
  <body onload="setup()">
-  Day: <span id="interval">1</span>  <br/>
-  <br/>
-  <button onClick = "throwSeeds()">Throw Seeds to Pigeons</button> <br/>
-  <span id="pigeons"></span> <br/>
-  <span id="fatPigeons"></span> <br/>
-  <span id="oldFatPigeons"></span> <br/>
-  <br/>
-  Seeds: <span id = "seeds">0</span> <br/>
-  <div id="seedSection">
-  <button onClick = "seedClick(seedIncome)">Gather Seeds</button>
-  <br/>
-  <br/>
-  Bushes: <span id="seedHarvesters">0</span> <br/>
-  Cost: £<span id="harvesterCost">2</span> <br/>
-  <button onClick = "buySeedHarvester()">Buy Bush</button> <br/>
-   </div>
+    Day: <span id="interval">1</span>  <br/>
+    <br/>
+    <button onClick = "throwSeeds()">Throw Seeds to Pigeons</button> <br/>
+    <span id="pigeons"></span> <br/>
+    <span id="fatPigeons"></span> <br/>
+    <span id="oldFatPigeons"></span> <br/>
+    <br/>
+    Seeds: <span id = "seeds">0</span> <br/>
+    <div id="seedSection">
+    <button onClick = "seedClick(seedIncome)">Gather Seeds</button>
+    <br/>
+    <br/>
+    Bushes: <span id="seedHarvesters">0</span> <br/>
+    Cost: £<span id="harvesterCost">2</span> <br/>
+    <button onClick = "buySeedHarvester()">Buy Bush</button> <br/>
+</div>
   
-  </br></br></br></br></br>
-<button onClick = "DeleteSave()">Delete Save</button>
-  <script type="text/javascript" src="main.js"></script>
+    </br></br></br></br></br>
+    <button onClick = "DeleteSave()">Delete Save</button>
+    <script type="text/javascript" src="main.js"></script>
 </body>
- </div>
+</div>
   
 
 <div id="column2">
    <body>
-    Money: £<span id= "money">0</span>      
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    <button onClick = "moneyClick(income)">Beg</button>
-    <br/><br/><br/><br/><br/><br/><br/>
-    <div id="flourButton">
-    <span id="flour">0</span>g of flour<br/>
-   <button onClick = "groundSeedsIntoFlour()">Grind Seeds into Flour</button> <br/>  
-   <br/>
-  Grinders: <span id="seedGrinders">0</span> <br/>
-  Cost: £<span id="grinderCost">10</span> <br/>
-  <button onClick = "buySeedGrinders()">Buy Grinder</button> <br/>
-    </div>
-  <br/>
+        Money: £<span id= "money">0</span>      
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <button onClick = "moneyClick(income)">Beg</button>
+        <br/><br/><br/><br/><br/><br/><br/>
+        <div id="flourButton">
+            <span id="flour">0</span>g of flour<br/>
+            <button onClick = "groundSeedsIntoFlour()">Grind Seeds into Flour</button> <br/>  
+            <br/>
+            Grinders: <span id="seedGrinders">0</span> <br/>
+            Cost: £<span id="grinderCost">10</span> <br/>
+            <button onClick = "buySeedGrinders()">Buy Grinder</button> <br/>
+        </div>
+    <br/>
     <div id="breadButton">
-   <button onClick = "bakeBread()">Bake Bread</button> <br/>
-   <span id="bread"></span><br/></div>
+        <span id="bread"></span><br/></div>
+        <button onClick = "bakeBread()">Bake Bread</button> <br/>
     </div>
    </body>
-   </div>
+</div>
 
 
 
 <div id="column3">
     <body>
-     <h1>Upgrades</h1>
-     </br></br>
-     Finger-less Gloves &nbsp; &nbsp; &nbsp; &nbsp;
-     <button onClick = "buyUpgrade(gloves)">Buy</button>
-     </br>
-     Increase the amount of seeds gathered per click.
-    </body>
-   </div>
+    <div id="upgrades">
+        <h1>Upgrades</h1>
+        </br></br>
+        Finger-less Gloves &nbsp; &nbsp; &nbsp; &nbsp;
+        <button onClick = "buyUpgrade(gloves)">Buy</button>
+        </br>
+        Increase the amount of seeds gathered per click.
+        </body>
+    </div>
+</div>
 </html>
