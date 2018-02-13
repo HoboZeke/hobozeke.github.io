@@ -275,7 +275,7 @@ function Save() {
     	}
     	localStorage.setItem("saveGame",JSON.stringify(saveGame));  
 	
-	document.getElementByID("story").innerHTML = localStorage.getItem("saveGame");
+	document.getElementById("story").innerHTML = localStorage.getItem("saveGame");
 }
 
 function Load() {
