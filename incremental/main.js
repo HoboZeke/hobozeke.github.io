@@ -259,53 +259,48 @@ window.setInterval(function()
 
 	}, 1000);
 
-function Save ()
-{
-	localStorage.setItem("seeds",seeds);
-	localStorage.setItem("seedHarvesters",seedHarvesters);
-	localStorage.setItem("flour",flour);
-	localStorage.setItem("seedGrinders",seedGrinders);
-	localStorage.setItem("interval",interval);
-	localStorage.setItem("bread",bread);
-	localStorage.setItem("pigeons",pigeons);
-	localStorage.setItem("fatPigeons",fatPigeons);
-	localStorage.setItem("oldFatPigeons",oldFatPigeons);
-	localStorage.setItem("money",money);
-	localStorage.setItem("persistantPigeons",persistantPigeons);
-	localStorage.setItem("pigeonThreshold",pigeonThreshold);
+function save() {
+       
+    var saveGame = {
+	    seeds:seeds,
+	    seedHarvesters:seedHarvesters,
+	    flour:flour,
+	    seedGrinders:seedGrinders,
+	    interval:interval,
+	    bread:bread,
+	    pigeons:pigeons,
+	    fatPigeons:fatPigeons,
+	    oldFatPigeons:oldFatPigeons,
+	    money:money,
+	    persistantPigeons:persistantPigeons,
+	    pigeonThreshold:pigeonThreshold
+    }
+    localStorage.setItem("saveGame",JSON.stringify(saveGame));    
 }
 
-function Load ()
-{
-
-	seeds = Number(localStorage.getItem("seeds"));
-	seedHarvesters = Number(localStorage.getItem("seedHarvesters"));
-	flour = Number(localStorage.getItem("flour"));
-	seedGrinders = Number(localStorage.getItem("seedGrinders"));
-	interval = 1; 						//Number(localStorage.getItem("interval")); Uncomment when day tracking is fixed for fatPigeons.
-	bread = Number(localStorage.getItem("bread"));
-	pigeons = Number(localStorage.getItem("pigeons"));
-	fatPigeons = Number(localStorage.getItem("fatPigeons"));
-	oldFatPigeons = Number(localStorage.getItem("oldFatPigeons"));
-	money = Number(localStorage.getItem("money"));
-	peristantPigeons = Number(localStorage.getItem("persistantPigeons"));
-	pigeonThreshold = Number(localStorage.getItem("pigeonThreshold"));
+function load() {
+    
+    	var loadGame = JSON.parse(localStorage.getItem("saveGame"));    
+   	
+	seeds = loadGame.seeds;
+        seedHarvesters = loadGame.seedHarvesters;
+	flour = loadGame.flour;
+	seedGrinders = loadGame.seedGrinders;
+	interval = 1;
+	bread = loadGame.bread;
+	pigeons = loadGame.pigeons;
+	fatPigeons = loadGame.fatPigeons;
+	oldFatPigeons = loadGame.oldFatPigeons;
+	money = loadGame.money;
+	persistantPigeons = loadGame.persistantPigeons;
+	pigeonThreshold = loadGame.pigeonThreshold;
+	
 	if (pigeons >= 1){loadedGameState = 1}
 }
 
+
 function DeleteSave()
 {
-	localStorage.removeItem("seeds");
-	localStorage.removeItem("seedHarvesters");
-	localStorage.removeItem("flour");
-	localStorage.removeItem("seedGrinders");
-	localStorage.removeItem("interval");
-	localStorage.removeItem("bread");
-	localStorage.removeItem("pigeons");
-	localStorage.removeItem("fatPigeons");
-	localStorage.removeItem("oldFatPigeons");
-	localStorage.removeItem("money");
-	localStorage.removeItem("persistantPigeons");
-	localStorage.removeItem("pigeonThreshold");
+	localStorage.removeItem("saveGame");
 	setup();
 }
