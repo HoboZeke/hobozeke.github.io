@@ -259,7 +259,7 @@ window.setInterval(function()
 
 	}, 1000);
 
-function save() {
+function Save() {
        
     var saveGame = {
 	    seeds:seeds,
@@ -278,7 +278,7 @@ function save() {
     localStorage.setItem("saveGame",JSON.stringify(saveGame));    
 }
 
-function load() {
+function Load() {
     
     	var loadGame = JSON.parse(localStorage.getItem("saveGame"));    
    	
