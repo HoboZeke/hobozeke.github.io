@@ -218,7 +218,7 @@ function UpdateLabels (type)
 
 	if (type == "flour"){
 		flour = Math.round(flour*10)/10; //Round the flour to 1 dp.
-		document.getElementById("flour").innerHTML = flour.toFixed(2);
+		document.getElementById("flour").innerHTML = flour.toFixed(1);
 		document.getElementById("seedGrinders").innerHTML = seedGrinders;}
 
 	if (type == "bread"){
