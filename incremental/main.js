@@ -25,8 +25,6 @@ function setup()
 
 	if (loadedGameState == 0)
 	{
-		seeds = 25;
-		pigeonThreshold = 100;
 		document.getElementById("story").innerHTML = "You have no home, no money, no shoes. </br> You sit on a park bench looking at your one possession, a bag of seeds.";
 	}
 	else if (loadedGameState == 1)
