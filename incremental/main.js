@@ -182,7 +182,7 @@ function StoryStage(stage)
 	}
 }
 
-function buyUpgrade(upgrade)
+function BuyUpgrade(upgrade)
 {
 	// 1 = fingerless gloves,
 	if(upgrade == 1 && money >= 0.5)
