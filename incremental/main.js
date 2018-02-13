@@ -261,21 +261,23 @@ window.setInterval(function()
 
 function Save() {
        
-    var saveGame = {
-	    seeds:seeds,
-	    seedHarvesters:seedHarvesters,
-	    flour:flour,
-	    seedGrinders:seedGrinders,
-	    interval:interval,
-	    bread:bread,
-	    pigeons:pigeons,
-	    fatPigeons:fatPigeons,
-	    oldFatPigeons:oldFatPigeons,
-	    money:money,
-	    persistantPigeons:persistantPigeons,
-	    pigeonThreshold:pigeonThreshold
-    }
-    localStorage.setItem("saveGame",JSON.stringify(saveGame));    
+    	var saveGame = {
+	    	seeds:seeds,
+	    	seedHarvesters:seedHarvesters,
+	    	flour:flour,
+	    	seedGrinders:seedGrinders,
+	    	interval:interval,
+	    	bread:bread,
+	    	pigeons:pigeons,
+	    	fatPigeons:fatPigeons,
+	    	oldFatPigeons:oldFatPigeons,
+	    	money:money,
+	    	persistantPigeons:persistantPigeons,
+	    	pigeonThreshold:pigeonThreshold
+    	}
+    	localStorage.setItem("saveGame",JSON.stringify(saveGame));  
+	
+	document.getElementByID("story").innerHTML = localStorage.getItem("saveGame");
 }
 
 function Load() {
