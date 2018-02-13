@@ -279,6 +279,8 @@ function Save() {
 }
 
 function Load() {
+	
+	document.getElementById("story").innerHTML = "Game loaded";
     
     	var loadGame = JSON.parse(localStorage.getItem("saveGame"));    
    	
