@@ -274,8 +274,6 @@ function Save() {
 	    	pigeonThreshold:pigeonThreshold
     	}
     	localStorage.setItem("saveGame",JSON.stringify(saveGame));  
-	
-	document.getElementById("story").innerHTML = localStorage.getItem("saveGame");
 }
 
 function Load() {
