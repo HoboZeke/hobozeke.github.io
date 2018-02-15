@@ -4,7 +4,7 @@ var pigeons = 0;				var pigeonDifference = 0;				var persistantPigeons = 0;
 var fatPigeons = 0;				var fatPigeonsRevealed = 0;
 var oldFatPigeons = 0;				var oldFatPigeonsRevealed = 0;
 var flour = 0;					var seedGrinders = 0;
-var bread = 0;					var breadRevealed = 0;
+var bread = 0;					var breadRevealed = 0;					var crumbs = 0;
 var interval = 1;	
 var loadedGameState = 0;
 var pigeonThreshold = 100;
@@ -167,6 +167,19 @@ function bakeBread ()
 
 		UpdateLabels("flour");
 		UpdateLabels("bread");
+		Reveal("crumbButton");
+	}
+}
+
+function MakeCrumbs ()
+{
+	if (bread>=1)
+	{
+		bread = bread - 1;
+		crumbs = crumbs + 25;
+		
+		UpdateLabels("crumbs");
+		UpdateLabels("bread");
 	}
 }
 
@@ -224,6 +237,10 @@ function UpdateLabels (type)
 	if (type == "bread"){
 		if (breadRevealed == 1){
 			document.getElementById("bread").innerHTML = bread + " loaves";}
+	}
+	
+	if (type == "crumbs"){
+		document.getElementById("crumbs").innerHTML = crumbs + " bread crumbs";}
 	}
 
 	if (type == "pigeons"){
