@@ -18,10 +18,6 @@ function setup()
 	UpdateLabels("flour");
 	UpdateLabels("days"); 
 	UpdateLabels("money");
-	Hide("seedSection");
-	Hide("flourButton");
-	Hide("breadButton");
-	Hide("upgrades");
 
 	if (loadedGameState == 0)
 	{
@@ -29,6 +25,7 @@ function setup()
 	}
 	else if (loadedGameState == 1)
 	{
+		Reveal("seedSection");
 		UpdateLabels("pigeons");
 		if(bread>=1){breadRevealed = 1; UpdateLabels("bread");}
 		if(fatPigeons>=1){fatPigeonsRevealed = 1; UpdateLabels("pigeons");}
@@ -267,6 +264,7 @@ window.setInterval(function()
 		if (seeds >= 50)
 		{
 			Reveal("flourButton");
+			Reaveal("upgrades");
 		}
 
 		Save();
@@ -287,7 +285,8 @@ function Save() {
 	    	oldFatPigeons:oldFatPigeons,
 	    	money:money,
 	    	persistantPigeons:persistantPigeons,
-	    	pigeonThreshold:pigeonThreshold
+	    	pigeonThreshold:pigeonThreshold,
+		crumbs:crumbs
     	}
     	localStorage.setItem("saveGame",JSON.stringify(saveGame));  
 }
@@ -310,8 +309,9 @@ function Load() {
 	money = loadGame.money;
 	persistantPigeons = loadGame.persistantPigeons;
 	pigeonThreshold = loadGame.pigeonThreshold;
+	crumbs = loadGame.crumbs;
 	
-	if (pigeons >= 1){loadedGameState = 1}
+	if (pigeons >= 1 || fatPigeons >= 1 || oldFatPigeons >= 1){loadedGameState = 1}
 }
 
 
