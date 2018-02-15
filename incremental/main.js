@@ -264,7 +264,7 @@ window.setInterval(function()
 		if (seeds >= 50)
 		{
 			Reveal("flourButton");
-			Reaveal("upgrades");
+			Reveal("upgrades");
 		}
 
 		Save();
