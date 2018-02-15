@@ -1,6 +1,7 @@
 var money = 0;					var income = 0.25;
 var seeds = 25;					var seedIncome = 1;					var seedHarvesters = 0;		
 var pigeons = 0;				var pigeonDifference = 0;				var persistantPigeons = 0;
+var chubbyPigeons = 0;				var chubbyPigeonsRevealed = 0;
 var fatPigeons = 0;				var fatPigeonsRevealed = 0;
 var oldFatPigeons = 0;				var oldFatPigeonsRevealed = 0;
 var flour = 0;					var seedGrinders = 0;
@@ -28,6 +29,7 @@ function setup()
 		Reveal("seedSection");
 		UpdateLabels("pigeons");
 		if(bread>=1){breadRevealed = 1; UpdateLabels("bread");}
+		if(chubbyPigeons>=1){chubbyPigeonsRevealed = 1; UpdateLabels("pigeons");}
 		if(fatPigeons>=1){fatPigeonsRevealed = 1; UpdateLabels("pigeons");}
 		if(oldFatPigeons>=1){oldFatPigeonsRevealed = 1; UpdateLabels("pigeons");}
 		var nextGCost = Math.floor(10 * Math.pow(1.1,seedGrinders));                       
@@ -112,13 +114,19 @@ function throwSeeds()
 	{
 		persistantPigeons = pigeons;
 	}
+	
+	if(crumbs >= chubbyPigeons){
+		crumbs = crumbs - chubbyPigeons;
+	}
+	else{
+		chubbyPigeons = crumbs;
+		crumbs = 0;
+	}
 
-	if (bread >= fatPigeons)
-	{
+	if (bread >= fatPigeons){
 		bread = bread - fatPigeons;
 	}
-	else
-	{
+	else{
 		fatPigeons = bread;
 		bread = 0;
 	}
@@ -128,8 +136,10 @@ function throwSeeds()
 	{        
 		oldFatPigeons = oldFatPigeons + fatPigeons;
 		if (oldFatPigeons >= 1){oldFatPigeonsRevealed = 1;}
-		fatPigeons = persistantPigeons;
+		fatPigeons = chubbyPigeons;
+		chubbyPigeons = persistantPigeons;
 		interval = 1;
+		if (chubbyPigeons >= 1){chubbyPigeonsRevealed = 1};
 		if (fatPigeons >= 1){fatPigeonsRevealed = 1;}
 	}
 
@@ -241,6 +251,8 @@ function UpdateLabels (type)
 
 	if (type == "pigeons"){
 		document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
+		if (chubbyPigeonsRevealed ==1){
+			document.getElementById("chubbyPigeons").innerHTML = chubbyPigeons + " chubby pigeons hungry for crumbs";}
 		if (fatPigeonsRevealed == 1){
 			document.getElementById("fatPigeons").innerHTML = fatPigeons + " fat pigeons looking for bread";}
 		if (oldFatPigeonsRevealed == 1){
@@ -281,6 +293,7 @@ function Save() {
 	    	interval:interval,
 	    	bread:bread,
 	    	pigeons:pigeons,
+		chubbyPigeons:chubbyPigeons,
 	    	fatPigeons:fatPigeons,
 	    	oldFatPigeons:oldFatPigeons,
 	    	money:money,
@@ -304,6 +317,7 @@ function Load() {
 	interval = 1;
 	bread = loadGame.bread;
 	pigeons = loadGame.pigeons;
+	chubbyPigeons = loadGame.chubbyPigeons;
 	fatPigeons = loadGame.fatPigeons;
 	oldFatPigeons = loadGame.oldFatPigeons;
 	money = loadGame.money;
