@@ -150,6 +150,7 @@ function throwSeeds()
 	}
 
 	UpdateLabels("seeds");
+	UpdateLabels("crumbs");
 	UpdateLabels("bread");
 	UpdateLabels("days"); 
 	UpdateLabels("pigeons");       
