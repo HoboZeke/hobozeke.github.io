@@ -4,16 +4,17 @@
 #column1 {
   float: left ;
   width: 200px ;
+  margin-right: 10px;
 }
 #column2 {
-  margin-left: 10px;
   float: left;
   width: 200px;
+  margin-right: 10px;
 }
 #column3 {
-  margin-left: 10px;
   float: left;
   width: 200px;
+  margin-right: 10px;
 }
 h2{
   line-height: 70%;
