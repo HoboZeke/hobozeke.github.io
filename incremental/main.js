@@ -240,8 +240,7 @@ function UpdateLabels (type)
 	}
 	
 	if (type == "crumbs"){
-		document.getElementById("crumbs").innerHTML = crumbs + " bread crumbs";
-	}
+		document.getElementById("crumbs").innerHTML = crumbs + " bread crumbs";}
 
 	if (type == "pigeons"){
 		document.getElementById("pigeons").innerHTML = pigeons + " pigeons currently feeding";
