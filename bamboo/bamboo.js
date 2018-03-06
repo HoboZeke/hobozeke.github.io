@@ -3,8 +3,8 @@ var bambooLength = 0;
 var intervalTimer = 5000;
 var bambooShootBase = "I";
 var noBambooShootBase = "_";
-var bambooShoot = "      I";
-var noBambooShoot = "      ";
+var bambooShoot = "I";
+var noBambooShoot = "";
 
 function GrowBamboo()
 {
