@@ -3,8 +3,8 @@ var bambooLength = 0;
 var intervalTimer = 5000;
 var bambooShootBase = "I";
 var noBambooShootBase = "_";
-var bambooShoot = "I";
-var noBambooShoot = "";
+var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I";
+var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
 function GrowBamboo()
 {
@@ -19,7 +19,7 @@ function GrowBamboo()
 		var index = i+1;
 		var name = "bamboo" + String(index);
 		
-		if (i<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
+		if (i<=0) //A catch for the first shoot, to allow proper rendering of plant pot.
 		{
 			document.getElementById(name).innerHTML = bambooShootBase;
 		}
