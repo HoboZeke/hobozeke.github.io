@@ -5,6 +5,7 @@ var bambooShootBase = "I";
 var noBambooShootBase = "_";
 var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I";
 var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+var shootsCollected = 0;
 
 function GrowBamboo()
 {
@@ -48,6 +49,8 @@ function Harvest()
 		}
 	}
 	
+	shootsCollected = shootsCollected + bambooLength;
+	document.getElementById("shottsCollected").innerHTML = shootsCollected;
 	bambooLength = 0;
 	document.getElementById("bambooLength").innerHTML = bambooLength;
 }
