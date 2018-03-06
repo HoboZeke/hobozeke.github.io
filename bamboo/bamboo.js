@@ -25,7 +25,7 @@ function GrowBamboo()
 		}
 		else
 		{
-			document.getElementById(name).innerHTML = bambooShootBase;
+			document.getElementById(name).innerHTML = bambooShoot;
 		}
 	}
 	
