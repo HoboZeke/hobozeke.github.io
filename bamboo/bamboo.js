@@ -1,5 +1,5 @@
 //Bamboo Growth Simulator
-var bambooLength;
+var bambooLength = 0;
 var intervalTimer = 5000;
 var bambooShootBase = "I";
 var noBambooShootBase = "_";
