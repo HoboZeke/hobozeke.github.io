@@ -31,7 +31,26 @@ function GrowBamboo()
 	
 }
 
-
+function Harvest()
+{
+	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
+	{
+		var index = i+1;
+		var name = "bamboo" + String(index);
+		
+		if (i<=0) //A catch for the first shoot, to allow proper rendering of plant pot.
+		{
+			document.getElementById(name).innerHTML = noBambooShootBase;
+		}
+		else
+		{
+			document.getElementById(name).innerHTML = noBambooShoot;
+		}
+	}
+	
+	bambooLength = 0;
+	document.getElementById("bambooLength").innerHTML = bambooLength;
+}
 
 window.setInterval(function()
 	{
