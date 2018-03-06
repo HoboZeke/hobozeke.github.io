@@ -19,7 +19,7 @@ function GrowBamboo()
 		var index = i+1;
 		var name = "bamboo" + String(index);
 		
-		if (i=0) //A catch for the first shoot, to allow proper rendering of plant pot.
+		if (i<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 		{
 			document.getElementById(name).innerHTML = bambooShootBase;
 		}
