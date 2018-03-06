@@ -16,7 +16,8 @@ function GrowBamboo()
 	
 	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
 	{
-		var name = "bamboo" + String(i+1);
+		var index = i+1;
+		var name = "bamboo" + String(index);
 		
 		if (i=0) //A catch for the first shoot, to allow proper rendering of plant pot.
 		{
