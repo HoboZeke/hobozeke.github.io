@@ -8,7 +8,10 @@ var noBambooShoot = "      ";
 
 function GrowBamboo()
 {
-	bambooLength++;   //increse the length of bamboo
+	if (bambooLength < 10)
+	{
+		bambooLength++;   //increse the length of bamboo
+	}
 	document.getElementById("bambooLength").innerHTML = bambooLength;
 	
 	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
