@@ -7,6 +7,7 @@
  Leaves Collected: <span id="leavesCollected">0</span>
 </head>
 <body>
+ <div id = "plant1">
 <div id= "bamboo">
 <span id="bamboo20" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
 <span id="bamboo19" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
@@ -37,8 +38,16 @@
  </div>
  <button onClick = "Harvest()">Harvest</button>
  <br/>
- <br/>
- <button onClick = "IncreaseBambooSize()">Increase Size</button>
+ Increase Bamboo Size &nbsp; Cost:<span id="increaseSizeCost">10</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize()">Buy</button> 
+  <br/>
+   Increase Leaf Chance &nbsp; Cost:<span id="increaseLeafChanceCost">10</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance()">Buy</button> 
+  <br/>
+   Increase Growth Speed &nbsp; Cost:<span id="increaseGrowthSpeedCost">10</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed()">Buy</button> 
+  <br/>
+  </div>
 </body>
  <script type="text/javascript" src="bamboo.js"></script>
 </html>
