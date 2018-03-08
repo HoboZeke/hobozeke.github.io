@@ -1,10 +1,10 @@
 //Bamboo Growth Simulator
 var bambooLength = 0;
 var intervalTimer = 5000;
-var bambooShootBase = "I";
-var noBambooShootBase = "_";
-var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I";
-var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+var bambooShootBase = "_I_";
+var noBambooShootBase = "___";
+var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
+var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 var shootsCollected = 0;
 
 function GrowBamboo()
@@ -13,7 +13,7 @@ function GrowBamboo()
 	{
 		bambooLength++;   //increse the length of bamboo
 	}
-	console.log("Bamboo Length:" + bambooLength);
+	console.log("Bamboo Length:" +bambooLength);
 	
 	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
 	{
@@ -50,9 +50,9 @@ function Harvest()
 	}
 	
 	shootsCollected = shootsCollected + bambooLength;
-	document.getElementById("shootsCollected").innerHTML = shootsCollected;
+	document.getElementById("shottsCollected").innerHTML = shootsCollected;
 	bambooLength = 0;
-	console.log("Bamboo Length:" + bambooLength);
+	console.log("Bamboo Length:" +bambooLength);
 }
 
 window.setInterval(function()
