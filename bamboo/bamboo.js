@@ -4,9 +4,9 @@ var intervalTimer = 5000;
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
 var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
-var bambooShootLeafLeft = "&nbsp;&nbsp;&nbsp;&nbsp;<>I<br/>";
+var bambooShootLeafLeft = "&nbsp;&nbsp;&nbsp;<>I<br/>";
 var bambooShootLeafRight = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<><br/>";
-var bambooShootLeafBoth = "&nbsp;&nbsp;&nbsp;&nbsp;<>I<><br/>";
+var bambooShootLeafBoth = "&nbsp;&nbsp;&nbsp;<>I<><br/>";
 var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 var shootsCollected = 0;
 var leavesCollected = 0;
@@ -20,11 +20,13 @@ function GrowBamboo()
 	{
 		bambooLength++;   //increse the length of bamboo
 	}
-	console.log("Bamboo Length:" +bambooLength);
+	console.log("Bamboo Length:"+bambooLength);
 	
 	var index = bambooLength;
 	var name = "bamboo" + String(index);
 	var chance = GetRandomInt(1000);
+	
+	console.log("Chance:"+Chance);
 		
 	if (bambooLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
