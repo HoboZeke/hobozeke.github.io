@@ -50,7 +50,7 @@ function Harvest()
 	}
 	
 	shootsCollected = shootsCollected + bambooLength;
-	document.getElementById("shottsCollected").innerHTML = shootsCollected;
+	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	bambooLength = 0;
 	console.log("Bamboo Length:" +bambooLength);
 }
