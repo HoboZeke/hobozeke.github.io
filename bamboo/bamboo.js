@@ -113,6 +113,7 @@ function IncreaseBambooSize ()
 		shootsCollected = shootsCollected - bambooSizeCost;
 		bambooSizeCost = bambooSizeCost * 1.5;
 		document.getElementById("increaseSizeCost").innerHTML = bambooSizeCost;
+		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 		var newName = "bamboo" + String(maxBambooHeight);
 		Reveal(newName);
 	}
@@ -130,6 +131,7 @@ function IncreaseLeafChance ()
 		doubleLeafChance = doubleLeafChance + 10;
 		leafChanceCost = leafChanceCost * 1.5;
 		document.getElementById("increaseLeafChanceCost").innerHTML = leafChanceCost;
+		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
 
@@ -144,6 +146,7 @@ function IncreaseGrowthSpeed ()
 		if(intervalTimer > 100){intervalTimer = intervalTimer - 100;}
 		growthSpeedCost = growthSpeedCost * 1.5;
 		document.getElementById("increaseGrowthSpeedCost").innerHTML = growthSpeedCost;
+		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
 
