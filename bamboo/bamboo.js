@@ -184,7 +184,7 @@ function IncreaseRank ()
 	else
 	{
 		shootsCollected = shootsCollected - rankCost;
-		if(bambooRank < 3){bambooRank++;
+		if(bambooRank < 3){bambooRank++;}
 		rankCost = rankCost * 1.5;
 		document.getElementById("increaseRankCost").innerHTML = rankCost;
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
