@@ -15,6 +15,9 @@ var leavesCollected = 0;
 var leafCount = 0;
 var leafChance = 250; //This is measured against 1000, so basically % * 10
 var doubleLeafChance = 10;
+var bambooSizeCost = 10;
+var growthSpeedCost = 25;
+var leafChanceCost = 20;
 
 function GrowBamboo()
 {
@@ -99,7 +102,7 @@ function Harvest()
 	
 function IncreaseBambooSize ()
 {
-	if (maxBambooHeight >= 20)
+	if (maxBambooHeight >= 20 || shootsCollected < bambooSizeCost)
 	{
 		return;
 	}
@@ -107,8 +110,40 @@ function IncreaseBambooSize ()
 	{
 		maxBambooHeight++;
 		maxReached = 0;
+		shootsCollected = shootsCollected - bambooSizeCost;
+		bambooSizeCost = bambooSizeCost * 1.5;
+		document.getElementById("increaseSizeCost").innerHTML = bambooSizeCost;
 		var newName = "bamboo" + String(maxBambooHeight);
 		Reveal(newName);
+	}
+}
+
+function IncreaseLeafChance ()
+{
+	if (shootsCollected < leafChanceCost)
+	{
+		return;
+	}
+	else
+	{
+		leafChance = leafChance + 50;
+		doubleLeafChance = doubleLeafChance + 10;
+		leafChanceCost = leafChanceCost * 1.5;
+		document.getElementById("increaseLeafChanceCost").innerHTML = leafChanceCost;
+	}
+}
+
+function IncreaseGrowthSpeed ()
+{
+	if (shootsCollected < growthSpeedCost)
+	{
+		return;
+	}
+	else
+	{
+		if(intervalTimer > 100){intervalTimer = intervalTimer - 100;}
+		growthSpeedCost = growthSpeedCost * 1.5;
+		document.getElementById("increaseGrowthSpeedCost").innerHTML = growthSpeedCost;
 	}
 }
 
