@@ -1,6 +1,7 @@
 //Bamboo Growth Simulator
 var bambooLength = 0;
 var maxBambooHeight = 10;
+var maxReached = 0;
 var intervalTimer = 5000;
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
@@ -35,7 +36,14 @@ function GrowBamboo()
 	}
 	else if (bambooLength == maxBambooHeight)
 	{
-		console.log("max length reached");
+		if (maxReached >= 1)
+		{
+			console.log("max length reached");
+		}
+		else
+		{
+			maxReached = 1;
+		}
 	}
 	else
 	{
@@ -99,6 +107,7 @@ function IncreaseBambooSize ()
 	else
 	{
 		maxBambooHeight++;
+		maxReached = 0;
 		var newName = "bamboo" + String(maxBambooHeight);
 		Reveal(newName);
 	}
