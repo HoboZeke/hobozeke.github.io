@@ -5,15 +5,15 @@ var intervalTimer = 5000;
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
 var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
-var bambooShootLeafLeft = "&nbsp;&nbsp;<>I<br/>";
+var bambooShootLeafLeft = "&nbsp;<>I<br/>";
 var bambooShootLeafRight = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<><br/>";
-var bambooShootLeafBoth = "&nbsp;&nbsp;<>I<><br/>";
+var bambooShootLeafBoth = "&nbsp;<>I<><br/>";
 var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 var shootsCollected = 0;
 var leavesCollected = 0;
 var leafCount = 0;
 var leafChance = 250; //This is measured against 1000, so basically % * 10
-var doubleLeafChance = 100;
+var doubleLeafChance = 10;
 
 function GrowBamboo()
 {
