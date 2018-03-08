@@ -1,5 +1,6 @@
 //Bamboo Growth Simulator
 var bambooLength = 0;
+var maxBambooHeight = 10;
 var intervalTimer = 5000;
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
@@ -16,7 +17,7 @@ var doubleLeafChance = 100;
 
 function GrowBamboo()
 {
-	if (bambooLength < 10)
+	if (bambooLength < maxBambooHeight)
 	{
 		bambooLength++;   //increse the length of bamboo
 	}
@@ -26,7 +27,7 @@ function GrowBamboo()
 	var name = "bamboo" + String(index);
 	var chance = GetRandomInt(1000);
 	
-	console.log("Chance:"+Chance);
+	console.log("Chance:"+chance);
 		
 	if (bambooLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
