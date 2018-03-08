@@ -36,7 +36,7 @@ function GrowBamboo()
 	}
 	else if (maxReached >= 1)
 	{
-		console.log("max length reached");
+		console.log("max length reached:"+maxBambooHeight);
 	}
 	else
 	{
@@ -93,6 +93,7 @@ function Harvest()
 	document.getElementById("leavesCollected").innerHTML = leavesCollected;
 	bambooLength = 0;
 	leafCount = 0;
+	maxReached = 0;
 	console.log("Bamboo Length:" +bambooLength);
 }
 	
