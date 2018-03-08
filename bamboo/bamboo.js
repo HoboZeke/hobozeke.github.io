@@ -13,7 +13,7 @@ function GrowBamboo()
 	{
 		bambooLength++;   //increse the length of bamboo
 	}
-	document.getElementById("bambooLength").innerHTML = bambooLength;
+	console.log("Bamboo Length:" + bambooLength);
 	
 	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
 	{
@@ -52,7 +52,7 @@ function Harvest()
 	shootsCollected = shootsCollected + bambooLength;
 	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	bambooLength = 0;
-	document.getElementById("bambooLength").innerHTML = bambooLength;
+	console.log("Bamboo Length:" + bambooLength);
 }
 
 window.setInterval(function()
