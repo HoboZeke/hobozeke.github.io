@@ -18,6 +18,7 @@ var doubleLeafChance = 10;
 var bambooSizeCost = 10;
 var growthSpeedCost = 25;
 var leafChanceCost = 20;
+var rankCost = 200;
 var bambooRank = 1;
 var bambooShootBaseR2 = "_II";
 var bambooShootR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<br/>";
@@ -46,7 +47,10 @@ function GrowBamboo()
 		
 	if (bambooLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
-		document.getElementById(name).innerHTML = bambooShootBase;
+		if(bambooRank==1){document.getElementById(name).innerHTML = bambooShootBase;}
+		else if(bambooRank==2){document.getElementById(name).innerHTML = bambooShootBaseR2;}
+		else if(bambooRank==3){document.getElementById(name).innerHTML = bambooShootBaseR3;}
+		
 	}
 	else if (maxReached >= 1)
 	{
@@ -58,23 +62,31 @@ function GrowBamboo()
 		{
 			if(doubleLeafChance >= chance)
 			{
-				document.getElementById(name).innerHTML = bambooShootLeafBoth;
+				if(bambooRank==1){document.getElementById(name).innerHTML = bambooShootLeafBoth;}
+				else if(bambooRank==2){document.getElementById(name).innerHTML = bambooShootLeafBothR2;}
+				else if(bambooRank==3){document.getElementById(name).innerHTML = bambooShootLeafBothR3;}
 				leafCount = leafCount + 2;
 			}
 			else if(leafChance/2 >= chance)
 			{
-				document.getElementById(name).innerHTML = bambooShootLeafRight;
+				if(bambooRank==1){document.getElementById(name).innerHTML = bambooShootLeafRight;}
+				else if(bambooRank==2){document.getElementById(name).innerHTML = bambooShootLeafRightR2;}
+				else if(bambooRank==3){document.getElementById(name).innerHTML = bambooShootLeafRightR3;}
 				leafCount = leafCount + 1;
 			}
 			else
 			{
-				document.getElementById(name).innerHTML = bambooShootLeafLeft;
+				if(bambooRank==1){document.getElementById(name).innerHTML = bambooShootLeafLeft;}
+				else if(bambooRank==2){document.getElementById(name).innerHTML = bambooShootLeafLeftR2;}
+				else if(bambooRank==3){document.getElementById(name).innerHTML = bambooShootLeafLeftR3;}
 				leafCount = leafCount + 1;
 			}
 		}
 		else
 		{
-			document.getElementById(name).innerHTML = bambooShoot;
+			if(bambooRank==1){document.getElementById(name).innerHTML = bambooShoot;}
+			else if(bambooRank==2){document.getElementById(name).innerHTML = bambooShootR2;}
+			else if(bambooRank==3){document.getElementById(name).innerHTML = bambooShootR3;}
 		}
 		
 		if (bambooLength == maxBambooHeight)
@@ -138,6 +150,7 @@ function IncreaseLeafChance ()
 	}
 	else
 	{
+		shootsCollected = shootsCollected - leafChanceCost;
 		leafChance = leafChance + 50;
 		doubleLeafChance = doubleLeafChance + 10;
 		leafChanceCost = leafChanceCost * 1.5;
@@ -154,9 +167,26 @@ function IncreaseGrowthSpeed ()
 	}
 	else
 	{
+		shootsCollected = shootsCollected - growthSpeedCost;
 		if(intervalTimer > 100){intervalTimer = intervalTimer - 100;}
 		growthSpeedCost = growthSpeedCost * 1.5;
 		document.getElementById("increaseGrowthSpeedCost").innerHTML = growthSpeedCost;
+		document.getElementById("shootsCollected").innerHTML = shootsCollected;
+	}
+}
+
+function IncreaseRank ()
+{
+	if (shootsCollected < rankCost)
+	{
+		return;
+	}
+	else
+	{
+		shootsCollected = shootsCollected - rankCost;
+		if(bambooRank < 3){bambooRank++;
+		rankCost = rankCost * 1.5;
+		document.getElementById("increaseRankCost").innerHTML = rankCost;
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
