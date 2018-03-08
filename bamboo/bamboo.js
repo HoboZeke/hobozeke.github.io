@@ -18,6 +18,17 @@ var doubleLeafChance = 10;
 var bambooSizeCost = 10;
 var growthSpeedCost = 25;
 var leafChanceCost = 20;
+var bambooRank = 1;
+var bambooShootBaseR2 = "_II";
+var bambooShootR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<br/>";
+var bambooShootLeafLeftR2 = "&#8239;&#8239;<>II<br/>";
+var bambooShootLeafRightR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
+var bambooShootLeafBothR2 = "&#8239;&#8239;<>II<><br/>";
+var bambooShootBaseR3 = "III";
+var bambooShootR3 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
+var bambooShootLeafLeftR2 = "<>III<br/>";
+var bambooShootLeafRightR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
+var bambooShootLeafBothR2 = "<>III<><br/>";
 
 function GrowBamboo()
 {
@@ -90,7 +101,7 @@ function Harvest()
 		}
 	}
 	
-	shootsCollected = shootsCollected + bambooLength;
+	shootsCollected = shootsCollected + (bambooLength*bambooRank);
 	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	leavesCollected = leavesCollected + leafCount;
 	document.getElementById("leavesCollected").innerHTML = leavesCollected;
