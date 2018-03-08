@@ -49,8 +49,8 @@ function Harvest()
 		}
 	}
 	
-	//shootsCollected = shootsCollected + bambooLength;
-	//document.getElementById("shootsCollected").innerHTML = shootsCollected;
+	shootsCollected = shootsCollected + bambooLength;
+	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	bambooLength = 0;
 	document.getElementById("bambooLength").innerHTML = bambooLength;
 }
