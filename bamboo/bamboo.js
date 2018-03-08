@@ -112,7 +112,7 @@ function Reveal(name)
 {
 	var x = document.getElementById(name);
 	if (x.style.display === "none") {
-		x.style.display = "block";
+		x.style.display = "inline";
 	}
 }
 function Hide(name) 
