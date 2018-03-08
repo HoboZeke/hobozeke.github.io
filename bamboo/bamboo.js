@@ -22,43 +22,39 @@ function GrowBamboo()
 	}
 	console.log("Bamboo Length:" +bambooLength);
 	
-	for (i = 0; i < bambooLength; i++)  //loop through all the shoots
-	{
-		var index = i+1;
-		var name = "bamboo" + String(index);
-		var chance = GetRandomInt(1000);
+	var index = bambooLength;
+	var name = "bamboo" + String(index);
+	var chance = GetRandomInt(1000);
 		
-		if (i<=0) //A catch for the first shoot, to allow proper rendering of plant pot.
+	if (bambooLength<=0) //A catch for the first shoot, to allow proper rendering of plant pot.
+	{
+		document.getElementById(name).innerHTML = bambooShootBase;
+	}
+	else
+	{
+		if(leafChance >= chance)
 		{
-			document.getElementById(name).innerHTML = bambooShootBase;
-		}
-		else
-		{
-			if(leafChance >= chance)
+			if(doubleLeafChance >= chance)
 			{
-				if(doubleLeafChance >= chance)
-				{
-					document.getElementById(name).innerHTML = bambooShootLeafBoth;
-					leafCount = leafCount + 2;
-				}
-				else if(leafChance/2 >= chance)
-				{
-					document.getElementById(name).innerHTML = bambooShootLeafRight;
-					leafCount = leafCount + 1;
-				}
-				else
-				{
-					document.getElementById(name).innerHTML = bambooShootLeafLeft;
-					leafCount = leafCount + 1;
-				}
+				document.getElementById(name).innerHTML = bambooShootLeafBoth;
+				leafCount = leafCount + 2;
+			}
+			else if(leafChance/2 >= chance)
+			{
+				document.getElementById(name).innerHTML = bambooShootLeafRight;
+				leafCount = leafCount + 1;
 			}
 			else
 			{
-				document.getElementById(name).innerHTML = bambooShoot;
+				document.getElementById(name).innerHTML = bambooShootLeafLeft;
+				leafCount = leafCount + 1;
 			}
 		}
+		else
+		{
+			document.getElementById(name).innerHTML = bambooShoot;
+		}
 	}
-	
 }
 
 function Harvest()
