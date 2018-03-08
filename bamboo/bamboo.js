@@ -5,9 +5,9 @@ var intervalTimer = 5000;
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
 var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
-var bambooShootLeafLeft = "&nbsp;&nbsp;&nbsp;<>I<br/>";
+var bambooShootLeafLeft = "&nbsp;&nbsp;<>I<br/>";
 var bambooShootLeafRight = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<><br/>";
-var bambooShootLeafBoth = "&nbsp;&nbsp;&nbsp;<>I<><br/>";
+var bambooShootLeafBoth = "&nbsp;&nbsp;<>I<><br/>";
 var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 var shootsCollected = 0;
 var leavesCollected = 0;
@@ -32,6 +32,10 @@ function GrowBamboo()
 	if (bambooLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
 		document.getElementById(name).innerHTML = bambooShootBase;
+	}
+	else if (bambooLength == maxBambooHeight)
+	{
+		console.log("max length reached");
 	}
 	else
 	{
@@ -85,7 +89,21 @@ function Harvest()
 	leafCount = 0;
 	console.log("Bamboo Length:" +bambooLength);
 }
-			
+	
+function IncreaseBambooSize ()
+{
+	if (maxBambooHeight >= 20)
+	{
+		return;
+	}
+	else
+	{
+		maxBambooHeight++;
+		var newName = "bamboo" + String(maxBambooHeight);
+		Reveal(newName);
+	}
+}
+
 function GetRandomInt(max) 
 {
 	return Math.floor(Math.random() * Math.floor(max));
