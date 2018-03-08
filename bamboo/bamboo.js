@@ -34,16 +34,9 @@ function GrowBamboo()
 	{
 		document.getElementById(name).innerHTML = bambooShootBase;
 	}
-	else if (bambooLength == maxBambooHeight)
+	else if (maxReached >= 1)
 	{
-		if (maxReached >= 1)
-		{
-			console.log("max length reached");
-		}
-		else
-		{
-			maxReached = 1;
-		}
+		console.log("max length reached");
 	}
 	else
 	{
@@ -68,6 +61,11 @@ function GrowBamboo()
 		else
 		{
 			document.getElementById(name).innerHTML = bambooShoot;
+		}
+		
+		if (bambooLength == maxBambooHeight)
+		{
+			maxReached = 1;
 		}
 	}
 }
