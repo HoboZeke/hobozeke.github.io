@@ -4,7 +4,7 @@
  <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Bamboo</title>
  Bamboo Shoots Collected: <span id="shootsCollected">0</span><br/>
- Leaves Collected: <span id="leavesCollected">0</span>
+ Leaves Collected: <span id="leavesCollected">0</span> <br/>
 </head>
 <body>
  <div id = "plant1">
@@ -36,26 +36,235 @@
 &nbsp;&nbsp;\___/ <br/>
 </span>
  </div>
- <button onClick = "Harvest()">Harvest</button>
+ <button onClick = "Harvest(1)">Harvest</button>
  <br/>
- Heigher Roof <br/>
-  Cost:<span id="increaseSizeCost">10</span> bamboo <br/>
-  <button onClick = "IncreaseBambooSize()">Buy</button> 
+ Higher Roof <br/>
+  Cost:<span id="increaseSizeCost1">10</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize(1)">Buy</button> 
   <br/> 
   <br/>
   More Leaves <br/> 
-   Cost:<span id="increaseLeafChanceCost">20</span> bamboo <br/>
-  <button onClick = "IncreaseLeafChance()">Buy</button> 
+   Cost:<span id="increaseLeafChanceCost1">20</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance(1)">Buy</button> 
   <br/>
   <br/>
   Faster Growth <br/>
-   Cost:<span id="increaseGrowthSpeedCost">25</span> bamboo <br/>
-  <button onClick = "IncreaseGrowthSpeed()">Buy</button> 
+   Cost:<span id="increaseGrowthSpeedCost1">25</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed(1)">Buy</button> 
   <br/>
   <br/>
   More Bamboo <br/>
-   Cost:<span id="increaseRankCost">200</span> bamboo <br/>
-  <button onClick = "IncreaseRank()">Buy</button> 
+   Cost:<span id="increaseRankCost1">200</span> bamboo <br/>
+  <button onClick = "IncreaseRank(1)">Buy</button> 
+  <br/>
+  <br/>
+  </div>
+  <div id = "plant2">
+<div id= "bamboo">
+<span id="2bamboo20" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo19" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo18" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo17" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo16" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo15" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo14" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo13" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo12" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo11" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo10" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo9" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo8" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo7" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo6" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo5" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo4" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo3" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="2bamboo2" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+&nbsp;&nbsp;_<span id="2bamboo1" style="color:limegreen;">___</span>_<br/>
+
+<span id="plantPot" style="color:brown;">
+ [_____]<br/>
+&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/   <br/>
+&nbsp;&nbsp;\___/ <br/>
+</span>
+ </div>
+ <button onClick = "Harvest(2)">Harvest</button>
+ <br/>
+ Higher Roof <br/>
+  Cost:<span id="increaseSizeCost2">20</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize(2)">Buy</button> 
+  <br/> 
+  <br/>
+  More Leaves <br/> 
+   Cost:<span id="increaseLeafChanceCost2">40</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance(2)">Buy</button> 
+  <br/>
+  <br/>
+  Faster Growth <br/>
+   Cost:<span id="increaseGrowthSpeedCost2">50</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed(2)">Buy</button> 
+  <br/>
+  <br/>
+  More Bamboo <br/>
+   Cost:<span id="increaseRankCost2">400</span> bamboo <br/>
+  <button onClick = "IncreaseRank(2)">Buy</button> 
+  <br/>
+  <br/>
+  </div>
+  <div id = "plant3">
+<div id= "bamboo">
+<span id="3bamboo20" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo19" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo18" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo17" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo16" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo15" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo14" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo13" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo12" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo11" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo10" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo9" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo8" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo7" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo6" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo5" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo4" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo3" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="3bamboo2" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+&nbsp;&nbsp;_<span id="3bamboo1" style="color:limegreen;">___</span>_<br/>
+
+<span id="plantPot" style="color:brown;">
+ [_____]<br/>
+&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/   <br/>
+&nbsp;&nbsp;\___/ <br/>
+</span>
+ </div>
+ <button onClick = "Harvest(3)">Harvest</button>
+ <br/>
+ Higher Roof <br/>
+  Cost:<span id="increaseSizeCost3">30</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize(3)">Buy</button> 
+  <br/> 
+  <br/>
+  More Leaves <br/> 
+   Cost:<span id="increaseLeafChanceCost3">60</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance(3)">Buy</button> 
+  <br/>
+  <br/>
+  Faster Growth <br/>
+   Cost:<span id="increaseGrowthSpeedCost3">75</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed(3)">Buy</button> 
+  <br/>
+  <br/>
+  More Bamboo <br/>
+   Cost:<span id="increaseRankCost3">600</span> bamboo <br/>
+  <button onClick = "IncreaseRank(3)">Buy</button> 
+  <br/>
+  <br/>
+  </div>
+  <div id = "plant4">
+<div id= "bamboo">
+<span id="4bamboo20" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo19" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo18" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo17" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo16" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo15" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo14" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo13" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo12" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo11" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo10" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo9" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo8" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo7" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo6" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo5" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo4" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo3" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="4bamboo2" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+&nbsp;&nbsp;_<span id="4bamboo1" style="color:limegreen;">___</span>_<br/>
+
+<span id="plantPot" style="color:brown;">
+ [_____]<br/>
+&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/   <br/>
+&nbsp;&nbsp;\___/ <br/>
+</span>
+ </div>
+ <button onClick = "Harvest(4)">Harvest</button>
+ <br/>
+ Higher Roof <br/>
+  Cost:<span id="increaseSizeCost4">40</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize(4)">Buy</button> 
+  <br/> 
+  <br/>
+  More Leaves <br/> 
+   Cost:<span id="increaseLeafChanceCost4">80</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance(4)">Buy</button> 
+  <br/>
+  <br/>
+  Faster Growth <br/>
+   Cost:<span id="increaseGrowthSpeedCost4">100</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed(4)">Buy</button> 
+  <br/>
+  <br/>
+  More Bamboo <br/>
+   Cost:<span id="increaseRankCost4">800</span> bamboo <br/>
+  <button onClick = "IncreaseRank(4)">Buy</button> 
+  <br/>
+  <br/>
+  </div>
+  
+  <div id = "plant5">
+<div id= "bamboo">
+<span id="5bamboo20" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo19" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo18" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo17" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo16" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo15" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo14" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo13" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo12" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo11" style="color:limegreen;display:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo10" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo9" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo8" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo7" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo6" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo5" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo4" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo3" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+<span id="5bamboo2" style="color:limegreen;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/></span> 
+&nbsp;&nbsp;_<span id="5bamboo1" style="color:limegreen;">___</span>_<br/>
+
+<span id="plantPot" style="color:brown;">
+ [_____]<br/>
+&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/   <br/>
+&nbsp;&nbsp;\___/ <br/>
+</span>
+ </div>
+ <button onClick = "Harvest(5)">Harvest</button>
+ <br/>
+ Higher Roof <br/>
+  Cost:<span id="increaseSizeCost5">50</span> bamboo <br/>
+  <button onClick = "IncreaseBambooSize(5)">Buy</button> 
+  <br/> 
+  <br/>
+  More Leaves <br/> 
+   Cost:<span id="increaseLeafChanceCost5">100</span> bamboo <br/>
+  <button onClick = "IncreaseLeafChance(5)">Buy</button> 
+  <br/>
+  <br/>
+  Faster Growth <br/>
+   Cost:<span id="increaseGrowthSpeedCost5">125</span> bamboo <br/>
+  <button onClick = "IncreaseGrowthSpeed(5)">Buy</button> 
+  <br/>
+  <br/>
+  More Bamboo <br/>
+   Cost:<span id="increaseRankCost5">1000</span> bamboo <br/>
+  <button onClick = "IncreaseRank(5)">Buy</button> 
   <br/>
   <br/>
   </div>
