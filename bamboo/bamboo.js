@@ -83,6 +83,11 @@ var bambooShootLeafLeftR3 = "<>III<br/>";
 var bambooShootLeafRightR3 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
 var bambooShootLeafBothR3 = "<>III<><br/>";
 
+function OnLoad()
+{
+	FirstTimer();
+}
+
 function GrowBamboo(plant)
 {
 	//Convert to temp identifiers for the specific bamboo.
