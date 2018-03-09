@@ -617,7 +617,7 @@ function ResetTimer (plant)
 	if (plant == 1)
 	{
 		clearInterval(bTimer);
-		var bTimer = window.setInterval(function()
+		bTimer = window.setInterval(function()
 		{
 		GrowBamboo(1);
 		}, intervalTimer);
@@ -625,7 +625,7 @@ function ResetTimer (plant)
 	else if (plant == 2)
 	{
 		clearInterval(b2Timer);
-		var b2Timer = window.setInterval(function()
+		b2Timer = window.setInterval(function()
 		{
 		GrowBamboo(2);
 		}, intervalTimer2);
@@ -633,7 +633,7 @@ function ResetTimer (plant)
 	else if (plant == 3)
 	{
 		clearInterval(b3Timer);
-		var b2Timer = window.setInterval(function()
+		b2Timer = window.setInterval(function()
 		{
 		GrowBamboo(3);
 		}, intervalTimer3);
@@ -641,7 +641,7 @@ function ResetTimer (plant)
 	else if (plant == 4)
 	{
 		clearInterval(b4Timer);
-		var b2Timer = window.setInterval(function()
+		b2Timer = window.setInterval(function()
 		{
 		GrowBamboo(4);
 		}, intervalTimer4);
@@ -649,7 +649,7 @@ function ResetTimer (plant)
 	else if (plant == 5)
 	{
 		clearInterval(b5Timer);
-		var b2Timer = window.setInterval(function()
+		b2Timer = window.setInterval(function()
 		{
 		GrowBamboo(5);
 		}, intervalTimer5);
