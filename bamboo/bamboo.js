@@ -142,8 +142,6 @@ function GrowBamboo(plant)
 	var index = bLength;
 	var name = bName + String(index);
 	var chance = GetRandomInt(1000);
-	
-	console.log("Chance:"+chance);
 		
 	if (bLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
