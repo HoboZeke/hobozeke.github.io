@@ -95,7 +95,7 @@ function GrowBamboo(plant)
 		var mHeight = maxBambooHeight;
 		var lChance =leafChance;
 		var dlChance =doubleLeafChance;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var bLength =   bambooLength2;
 		var bName = "2bamboo";
 		var bRank = bambooRank2;
@@ -104,7 +104,7 @@ function GrowBamboo(plant)
 		var mHeight = maxBambooHeight2;
 		var lChance =leafChance2;
 		var dlChance =doubleLeafChance2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var bLength =   bambooLength3;
 		var bName = "3bamboo";
 		var bRank = bambooRank3;
@@ -113,7 +113,7 @@ function GrowBamboo(plant)
 		var mHeight = maxBambooHeight3;
 		var lChance =leafChance3;
 		var dlChance =doubleLeafChance3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var bLength =   bambooLength4;
 		var bName = "4bamboo";
 		var bRank = bambooRank4;
@@ -122,7 +122,7 @@ function GrowBamboo(plant)
 		var mHeight = maxBambooHeight4;
 		var lChance =leafChance4;
 		var dlChance =doubleLeafChance4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var bLength =   bambooLength5;
 		var bName = "5bamboo";
 		var bRank = bambooRank5;
@@ -204,7 +204,7 @@ function GrowBamboo(plant)
 		maxBambooHeight = mHeight;
 		leafChance = lChance;
 		doubleLeafChance = dlChance;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		bambooLength2 = bLength;
 		bambooRank2 = bRank;
 		leafCount2 = lCount;
@@ -212,7 +212,7 @@ function GrowBamboo(plant)
 		maxBambooHeight2 = mHeight;
 		leafChance2 = lChance;
 		doubleLeafChance2 = dlChance;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		bambooLength3 = bLength;
 		bambooRank3 = bRank;
 		leafCount3 = lCount;
@@ -220,7 +220,7 @@ function GrowBamboo(plant)
 		maxBambooHeight3 = mHeight;
 		leafChance3 = lChance;
 		doubleLeafChance3 = dlChance;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		bambooLength4 = bLength;
 		bambooRank4 = bRank;
 		leafCount4 = lCount;
@@ -228,7 +228,7 @@ function GrowBamboo(plant)
 		maxBambooHeight4 = mHeight;
 		leafChance4 = lChance;
 		doubleLeafChance4 = dlChance;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		bambooLength5 = bLength;
 		bambooRank5 = bRank;
 		leafCount5 = lCount;
@@ -247,25 +247,25 @@ function Harvest(plant)
 		var bRank = bambooRank;
 		var lCount = leafCount;
 		var mReached = maxReached;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var bLength =   bambooLength2;
 		var bName = "2bamboo";
 		var bRank = bambooRank2;
 		var lCount = leafCount2;
 		var mReached = maxReached2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var bLength =   bambooLength3;
 		var bName = "3bamboo";
 		var bRank = bambooRank3;
 		var lCount = leafCount3;
 		var mReached = maxReached3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var bLength =   bambooLength4;
 		var bName = "4bamboo";
 		var bRank = bambooRank4;
 		var lCount = leafCount4;
 		var mReached = maxReached4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var bLength =   bambooLength5;
 		var bName = "5bamboo";
 		var bRank = bambooRank5;
@@ -302,19 +302,19 @@ function Harvest(plant)
 		bambooLength = bLength;
 		leafCount = lCount;
 		maxReached = mReached;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		bambooLength2 = bLength;
 		leafCount2 = lCount;
 		maxReached2 = mReached;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		bambooLength3 = bLength;
 		leafCount3 = lCount;
 		maxReached3 = mReached;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		bambooLength4 = bLength;
 		leafCount4 = lCount;
 		maxReached4 = mReached;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		bambooLength5 = bLength;
 		leafCount5 = lCount;
 		maxReached5 = mReached;
@@ -327,19 +327,19 @@ function IncreaseBambooSize (plant)
 		var cost =  bambooSizeCost;
 		var max = maxBambooHeight;
 		var mReached = maxReached;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var cost =  bambooSizeCost2;
 		var max = maxBambooHeight2;
 		var mReached = maxReached2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var cost =  bambooSizeCost3;
 		var max = maxBambooHeight3;
 		var mReached = maxReached3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var cost =  bambooSizeCost4;
 		var max = maxBambooHeight4;
 		var mReached = maxReached4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var cost =  bambooSizeCost5;
 		var max = maxBambooHeight5;
 		var mReached = maxReached5;
@@ -361,22 +361,22 @@ function IncreaseBambooSize (plant)
 			maxBambooHeight = max;
 			maxReached = mReached;
 			var newName = "bamboo" + String(maxBambooHeight);
-		}else if {plant == 2}{
+		}else if (plant == 2){
 			bambooSizeCost2 = cost;
 			maxBambooHeight2 = max;
 			maxReached2 = mReached;
 			var newName = "2bamboo" + String(maxBambooHeight2);
-		}else if {plant == 3}{
+		}else if (plant == 3){
 			bambooSizeCost3 = cost;
 			maxBambooHeight3 = max;
 			maxReached3 = mReached;
 			var newName = "3bamboo" + String(maxBambooHeight3);
-		}else if {plant == 4}{
+		}else if (plant == 4){
 			bambooSizeCost4 = cost;
 			maxBambooHeight4 = max;
 			maxReached4 = mReached;
 			var newName = "4bamboo" + String(maxBambooHeight4);
-		}else if {plant == 5}{
+		}else if (plant == 5){
 			bambooSizeCost5 = cost;
 			maxBambooHeight5 = max;
 			maxReached5 = mReached;
@@ -396,19 +396,19 @@ function IncreaseLeafChance (plant)
 		var cost =  leafChanceCost;
 		var lChance =leafChance;
 		var dlChance =doubleLeafChance;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var cost = leafChanceCost2;
 		var lChance =leafChance2;
 		var dlChance =doubleLeafChance2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var cost = leafChanceCost3;
 		var lChance =leafChance3;
 		var dlChance =doubleLeafChance3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var cost = leafChanceCost4;
 		var lChance =leafChance4;
 		var dlChance =doubleLeafChance4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var cost = leafChanceCost5;
 		var lChance =leafChance5;
 		var dlChance =doubleLeafChance5;
@@ -429,19 +429,19 @@ function IncreaseLeafChance (plant)
 			leafChanceCost = cost;
 			leafChance = lChance;
 			doubleLeafChance = dlChance;
-		}else if {plant == 2}{
+		}else if (plant == 2){
 			leafChanceCost2 = cost;
 			leafChance2 = lChance;
 			doubleLeafChance2 = dlChance;
-		}else if {plant == 3}{
+		}else if (plant == 3){
 			leafChanceCost3 = cost;
 			leafChance3 = lChance;
 			doubleLeafChance3 = dlChance;
-		}else if {plant == 4}{
+		}else if (plant == 4){
 			leafChanceCost4 = cost;
 			leafChance4 = lChance;
 			doubleLeafChance4 = dlChance;
-		}else if {plant == 5}{
+		}else if (plant == 5){
 			leafChanceCost5 = cost;
 			leafChance5 = lChance;
 			doubleLeafChance5 = dlChance;
@@ -458,16 +458,16 @@ function IncreaseGrowthSpeed (plant)
 	if(plant == 1){
 		var cost = growthSpeedCost;
 		var timer =intervalTimer;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var cost = growthSpeedCost2;
 		var timer =intervalTimer2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var cost = growthSpeedCost3;
 		var timer =intervalTimer3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var cost = growthSpeedCost4;
 		var timer =intervalTimer4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var cost = growthSpeedCost5;
 		var timer =intervalTimer5;
 	}
@@ -485,16 +485,16 @@ function IncreaseGrowthSpeed (plant)
 		if(plant == 1){
 			growthSpeedCost = cost;
 			intervalTimer = timer;
-		}else if {plant == 2}{
+		}else if (plant == 2){
 			growthSpeedCost2 = cost;
 			intervalTimer2 = timer;
-		}else if {plant == 3}{
+		}else if (plant == 3){
 			growthSpeedCost3 = cost;
 			intervalTimer3 = timer;
-		}else if {plant == 4}{
+		}else if (plant == 4){
 			growthSpeedCost4 = cost;
 			intervalTimer4 = timer;
-		}else if {plant == 5}{
+		}else if (plant == 5){
 			growthSpeedCost5 = cost;
 			intervalTimer5 = timer;
 		}
@@ -510,16 +510,16 @@ function IncreaseRank (plant)
 	if(plant == 1){
 		var cost = rankCost;
 		var bRank = bambooRank;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		var cost = rankCost2;
 		var bRank = bambooRank2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		var cost = rankCost3;
 		var bRank = bambooRank3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		var cost = rankCost4;
 		var bRank = bambooRank4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		var cost = rankCost5;
 		var bRank = bambooRank5;
 	}
@@ -535,13 +535,13 @@ function IncreaseRank (plant)
 		{
 			if(plant == 1){
 				bambooRank++;
-			}else if {plant == 2}{
+			}else if (plant == 2){
 				bambooRank2++;
-			}else if {plant == 3}{
+			}else if (plant == 3){
 				bambooRank3++;
-			}else if {plant == 4}{
+			}else if (plant == 4){
 				bambooRank4++;
-			}else if {plant == 5}{
+			}else if (plant == 5){
 				bambooRank5++;
 			}
 		}
@@ -550,16 +550,16 @@ function IncreaseRank (plant)
 	if(plant == 1){
 		rankCost = rankCost * 1.5;
 		cost = rankCost;
-	}else if {plant == 2}{
+	}else if (plant == 2){
 		rankCost2 = rankCost2 * 1.5;
 		cost = rankCost2;
-	}else if {plant == 3}{
+	}else if (plant == 3){
 		rankCost3 = rankCost3 * 1.5;
 		cost = rankCost3;
-	}else if {plant == 4}{
+	}else if (plant == 4){
 		rankCost4 = rankCost4 * 1.5;
 		cost = rankCost4;
-	}else if {plant == 5}{
+	}else if (plant == 5){
 		rankCost5 = rankCost5 * 1.5;
 		cost = rankCost5;
 	}
