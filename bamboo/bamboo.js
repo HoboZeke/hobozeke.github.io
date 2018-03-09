@@ -496,8 +496,6 @@ function IncreaseGrowthSpeed (plant)
 			growthSpeedCost5 = cost;
 			intervalTimer5 = timer;
 		}
-	
-		ResetTimer(plant);
 		
 		var docID = "increaseGrowthSpeedCost" + String(plant);
 		document.getElementById(docID).innerHTML = cost;
@@ -587,10 +585,15 @@ function Hide(name)
 }
 
 
-var bTimer = window.setInterval(function()
+function FirstTimer()
 {
-	GrowBamboo(1);
-}, intervalTimer);
+	var bTimer = window.setInterval(function()
+	{
+		GrowBamboo(1);
+		clearInterval(bTimer);
+		FirstTimer();
+	}, intervalTimer);
+}
 
 var b2Timer = window.setInterval(function()
 {
