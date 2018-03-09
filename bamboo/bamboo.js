@@ -78,9 +78,9 @@ var bambooShootLeafLeftR2 = "&#8239;&#8239;<>II<br/>";
 var bambooShootLeafRightR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
 var bambooShootLeafBothR2 = "&#8239;&#8239;<>II<><br/>";
 var bambooShootBaseR3 = "III";
-var bambooShootR3 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
+var bambooShootR3 = "&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
 var bambooShootLeafLeftR3 = "<>III<br/>";
-var bambooShootLeafRightR3 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
+var bambooShootLeafRightR3 = "&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
 var bambooShootLeafBothR3 = "<>III<><br/>";
 
 function OnLoad()
