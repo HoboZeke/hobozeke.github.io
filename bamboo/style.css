@@ -1,3 +1,15 @@
 #bamboo {
 line-height:12px;
 }
+
+#plant1 {
+  float: left;
+  width: 160px;
+  margin-right: 10px;
+}
+
+#plant2 {
+  float: left;
+  width: 160px;
+  margin-right: 10px;
+}
