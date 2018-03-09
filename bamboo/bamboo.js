@@ -497,6 +497,8 @@ function IncreaseGrowthSpeed (plant)
 			intervalTimer5 = timer;
 		}
 	
+		ResetTimer(plant);
+		
 		var docID = "increaseGrowthSpeedCost" + String(plant);
 		document.getElementById(docID).innerHTML = cost;
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
@@ -584,27 +586,72 @@ function Hide(name)
 	x.style.display = "none";
 }
 
-window.setInterval(function()
+
+var bTimer = window.setInterval(function()
+{
+	GrowBamboo(1);
+}, intervalTimer);
+
+var b2Timer = window.setInterval(function()
+{
+	GrowBamboo(2);
+}, intervalTimer2);
+
+var b3Timer = window.setInterval(function()
+{
+	GrowBamboo(3);
+}, intervalTimer3);
+
+var b4Timer = window.setInterval(function()
+{
+	GrowBamboo(4);
+}, intervalTimer4);
+
+var b5Timer = window.setInterval(function()
+{
+	GrowBamboo(5);
+}, intervalTimer5);
+
+function ResetTimer (plant)
+{
+	if (plant == 1)
 	{
+		clearInterval(bTimer);
+		var bTimer = window.setInterval(function()
+		{
 		GrowBamboo(1);
-	}, intervalTimer);
-
-window.setInterval(function()
+		}, intervalTimer);
+	}
+	else if (plant == 2)
 	{
+		clearInterval(b2Timer);
+		var b2Timer = window.setInterval(function()
+		{
 		GrowBamboo(2);
-	}, intervalTimer2);
-
-window.setInterval(function()
+		}, intervalTimer2);
+	} 
+	else if (plant == 3)
 	{
+		clearInterval(b3Timer);
+		var b2Timer = window.setInterval(function()
+		{
 		GrowBamboo(3);
-	}, intervalTimer3);
-
-window.setInterval(function()
+		}, intervalTimer3);
+	} 
+	else if (plant == 4)
 	{
+		clearInterval(b4Timer);
+		var b2Timer = window.setInterval(function()
+		{
 		GrowBamboo(4);
-	}, intervalTimer4);
-
-window.setInterval(function()
+		}, intervalTimer4);
+	} 
+	else if (plant == 5)
 	{
+		clearInterval(b5Timer);
+		var b2Timer = window.setInterval(function()
+		{
 		GrowBamboo(5);
-	}, intervalTimer5);
+		}, intervalTimer5);
+	} 
+}
