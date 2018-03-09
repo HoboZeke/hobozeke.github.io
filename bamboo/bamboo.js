@@ -86,6 +86,10 @@ var bambooShootLeafBothR3 = "<>III<><br/>";
 function OnLoad()
 {
 	FirstTimer();
+	SecondTimer();
+	ThirdTimer();
+	FourthTimer();
+	FifthTimer();
 }
 
 function GrowBamboo(plant)
@@ -600,66 +604,37 @@ function FirstTimer()
 	}, intervalTimer);
 }
 
-var b2Timer = window.setInterval(function()
+function SecondTimer()
 {
-	GrowBamboo(2);
-}, intervalTimer2);
-
-var b3Timer = window.setInterval(function()
-{
-	GrowBamboo(3);
-}, intervalTimer3);
-
-var b4Timer = window.setInterval(function()
-{
-	GrowBamboo(4);
-}, intervalTimer4);
-
-var b5Timer = window.setInterval(function()
-{
-	GrowBamboo(5);
-}, intervalTimer5);
-
-function ResetTimer (plant)
-{
-	if (plant == 1)
+	var b2Timer = window.setInterval(function()
 	{
-		clearInterval(bTimer);
-		bTimer = window.setInterval(function()
-		{
-		GrowBamboo(1);
-		}, intervalTimer);
-	}
-	else if (plant == 2)
-	{
-		clearInterval(b2Timer);
-		b2Timer = window.setInterval(function()
-		{
 		GrowBamboo(2);
-		}, intervalTimer2);
-	} 
-	else if (plant == 3)
+	}, intervalTimer2);
+}
+
+function ThirdTimer()
+{
+	var b3Timer = window.setInterval(function()
 	{
-		clearInterval(b3Timer);
-		b2Timer = window.setInterval(function()
-		{
 		GrowBamboo(3);
-		}, intervalTimer3);
-	} 
-	else if (plant == 4)
+	}, intervalTimer3);
+}
+
+function FourthTimer()
+{
+	var b4Timer = window.setInterval(function()
 	{
-		clearInterval(b4Timer);
-		b2Timer = window.setInterval(function()
-		{
 		GrowBamboo(4);
-		}, intervalTimer4);
-	} 
-	else if (plant == 5)
+	}, intervalTimer4);
+}
+
+function FifthTimer()
+{
+	var b5Timer = window.setInterval(function()
 	{
-		clearInterval(b5Timer);
-		b2Timer = window.setInterval(function()
-		{
 		GrowBamboo(5);
-		}, intervalTimer5);
-	} 
+	}, intervalTimer5);
+}
+
+
 }
