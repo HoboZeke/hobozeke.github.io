@@ -577,7 +577,7 @@ function IncreaseGrowthSpeed (plant)
 			intervalTimer5 = timer;
 		}
 		
-		var spanID = "grwothRate" + String(plant);
+		var spanID = "growthRate" + String(plant);
 		var docID = "increaseGrowthSpeedCost" + String(plant);
 		document.getElementById(spanID).innerHTML = "Every " + timer/1000 + " seconds";
 		document.getElementById(docID).innerHTML = cost+ "m";
