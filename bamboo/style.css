@@ -1,11 +1,13 @@
 #resources {
   float: left;
   width: 50%;
+  height: 50px;
 }
 
 #upgrades {
   float: left;
   width: 50%;
+  heigh: 50px;
 }
 
 #bamboo {
