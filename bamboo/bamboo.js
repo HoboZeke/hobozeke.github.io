@@ -60,6 +60,10 @@ var bambooRank3 = 1;
 var bambooRank4 = 1;
 var bambooRank5 = 1;
 
+//Global costs
+var plantCost = 100;
+var plantCount = 1;
+
 //Global Resources
 var shootsCollected = 0;
 var leavesCollected = 0;
@@ -90,6 +94,24 @@ function OnLoad()
 	ThirdTimer();
 	FourthTimer();
 	FifthTimer();
+}
+
+function BuyPlant()
+{
+	if (leavesCollected < plantCost)
+	{
+		return;
+	}
+	
+	plantCount++;
+	
+	var newPlant = "plant" + String(plantCount);
+	
+	Reveal(newPlant);
+	
+	plantCost = plantCost*2;
+	
+	document.getElementById("plantCost").innerHTML = plantCost;
 }
 
 function GrowBamboo(plant)
