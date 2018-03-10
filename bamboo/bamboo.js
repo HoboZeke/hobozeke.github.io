@@ -223,7 +223,7 @@ function GrowBamboo(plant)
 	}
 	else if (mReached >= 1)
 	{
-		console.log("max length reached:"+mHeight);
+		return;
 	}
 	else
 	{
