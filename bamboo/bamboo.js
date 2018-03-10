@@ -75,20 +75,20 @@ var leavesCollected = 0;
 //Graphics
 var bambooShootBase = "_I_";
 var noBambooShootBase = "___";
-var bambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
-var bambooShootLeafLeft = "&#8239;&#8239;<>I<br/>";
-var bambooShootLeafRight = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<><br/>";
-var bambooShootLeafBoth = "&#8239;&#8239;<>I<><br/>";
-var noBambooShoot = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
+var bambooShoot = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<br/>";
+var bambooShootLeafLeft = "&#8239;&#8239;&#8239;<>I<br/>";
+var bambooShootLeafRight = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I<><br/>";
+var bambooShootLeafBoth = "&#8239;&#8239;&#8239;<>I<><br/>";
+var noBambooShoot = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 var bambooShootBaseR2 = "_II";
-var bambooShootR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<br/>";
-var bambooShootLeafLeftR2 = "&#8239;&#8239;<>II<br/>";
-var bambooShootLeafRightR2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
-var bambooShootLeafBothR2 = "&#8239;&#8239;<>II<><br/>";
+var bambooShootR2 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<br/>";
+var bambooShootLeafLeftR2 = "&#8239;&#8239;&#8239;<>II<br/>";
+var bambooShootLeafRightR2 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
+var bambooShootLeafBothR2 = "&#8239;&#8239;&#8239;<>II<><br/>";
 var bambooShootBaseR3 = "III";
-var bambooShootR3 = "&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
+var bambooShootR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
 var bambooShootLeafLeftR3 = "<>III<br/>";
-var bambooShootLeafRightR3 = "&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
+var bambooShootLeafRightR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
 var bambooShootLeafBothR3 = "<>III<><br/>";
 
 function OnLoad()
