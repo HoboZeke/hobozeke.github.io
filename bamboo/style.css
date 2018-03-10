@@ -1,3 +1,14 @@
+#resources {
+  float: left;
+  width: 45%;
+  margin-right: 5px;
+}
+
+#upgrades {
+  float: left;
+  width: 45%;
+}
+
 #bamboo {
 line-height:12px;
 }
