@@ -117,6 +117,7 @@ function BuyPlant()
 	plantCost = plantCost*2;
 	
 	document.getElementById("plantCost").innerHTML = plantCost;
+	document.getElementById("leavesCollected").innerHTML = leavesCollected;
 }
 
 function BuyUpgrade(upgrade)
@@ -152,6 +153,8 @@ function BuyUpgrade(upgrade)
 	}
 	
 	leavesCollected = leavesCollected - cost;
+	
+	document.getElementById("leavesCollected").innerHTML = leavesCollected;
 }
 
 function GrowBamboo(plant)
