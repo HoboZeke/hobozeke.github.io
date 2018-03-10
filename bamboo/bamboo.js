@@ -453,7 +453,7 @@ function IncreaseBambooSize (plant)
 		}
 		
 		var docID = "increaseSizeCost" + String(plant);
-		document.getElementById(docID).innerHTML = cost;
+		document.getElementById(docID).innerHTML = cost + "m";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 		Reveal(newName);
 		
@@ -524,7 +524,7 @@ function IncreaseLeafChance (plant)
 		}
 	
 		var docID = "increaseLeafChanceCost" + String(plant);
-		document.getElementById(docID).innerHTML = cost;
+		document.getElementById(docID).innerHTML = cost+ "m";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
@@ -576,7 +576,7 @@ function IncreaseGrowthSpeed (plant)
 		}
 		
 		var docID = "increaseGrowthSpeedCost" + String(plant);
-		document.getElementById(docID).innerHTML = cost;
+		document.getElementById(docID).innerHTML = cost+ "m";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
@@ -641,7 +641,7 @@ function IncreaseRank (plant)
 	}
 		
 	var docID = "increaseRankCost" + String(plant);
-	document.getElementById(docID).innerHTML = cost;
+	document.getElementById(docID).innerHTML = cost+ "m";
 	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	
 	if (bRank >= 3)
