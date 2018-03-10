@@ -63,6 +63,10 @@ var bambooRank5 = 1;
 //Global costs
 var plantCost = 100;
 var plantCount = 1;
+var upgradeCount = 0;
+var leafUpgradeCost = 10;
+var growthUpgradeCost = 25;
+var rankUpgradeCost = 50;
 
 //Global Resources
 var shootsCollected = 0;
@@ -104,6 +108,7 @@ function BuyPlant()
 	}
 	
 	plantCount++;
+	leavseCollected = leavesCollected - plantCost;
 	
 	var newPlant = "plant" + String(plantCount);
 	
@@ -112,6 +117,41 @@ function BuyPlant()
 	plantCost = plantCost*2;
 	
 	document.getElementById("plantCost").innerHTML = plantCost;
+}
+
+function BuyUpgrade(upgrade)
+{
+	if(upgrade == 1){
+		var cost = leafUpgradeCost;}
+	else if (upgrade == 2){
+		var cost = growthUpgradeCost;}
+	else if (upgrade == 3){
+		var cost = rankUpgradeCost;}
+	
+	if (leavesCollected < cost)
+	{
+		return;
+	}
+	
+	if(upgrade == 1){
+		Reveal("leafSection");
+		Hide ("leafUpgrade");
+		upgradeCount++;}
+	else if (upgrade == 2){
+		Reveal("growthSection");
+		Hide ("growthUpgrade");
+		upgradeCount++;}
+	else if (upgrade == 3){
+		Reveal("rankSection");
+		Hide ("rankUpgrade");
+		upgradeCount++;}
+	
+	if(upgradeCount >= 3)
+	{
+		Reveal("plantUpgrade");
+	}
+	
+	leavesCollected = leavesCollected - cost;
 }
 
 function GrowBamboo(plant)
