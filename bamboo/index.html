@@ -8,7 +8,10 @@
  Leaves Collected: <span id="leavesCollected">0</span> <br/>
  </div>
  <div id = "upgrades">
- New Bamboo Plant: <span id="plantCost">100</span> leaves <button onClick = "BuyPlant()">Buy</button> <br/>
+ <span id="leafUpgrade"> Unlock Leaf Chance Upgrades: <span id="leafUpgradeCost">10</span> leaves <button onClick = "BuyUpgrade(1)">Buy</button><br/>
+ <span id="growthUpgrade"> Unlock Growth Speed Upgrades: <span id="growthUpgradeCost">50</span> leaves <button onClick = "BuyUpgrade(2)">Buy</button><br/>
+ <span id="rankUpgrade"> Unlock Bamboo Size Upgrades: <span id="rankUpgradeCost">25</span> leaves <button onClick = "BuyUpgrade(3)">Buy</button><br/>
+ <span id="plantUpgrade" style="display:none;">New Bamboo Plant: <span id="plantCost">100</span> leaves <button onClick = "BuyPlant()">Buy</button> <br/></span>
  </div>
 </head>
 <body>
@@ -49,19 +52,25 @@
   <span id="sizeButton1"><button onClick = "IncreaseBambooSize(1)">Buy</button> </span>
   <br/> 
   <br/>
+  <div id="leafSection" style = "display:none;">
   More Leaves <br/> 
    Cost:<span id="increaseLeafChanceCost1">20</span>m <br/>
   <button onClick = "IncreaseLeafChance(1)">Buy</button> 
+  </div>
   <br/>
   <br/>
+  <div id="growthSection" style = "display:none;">
   Faster Growth <br/>
    Cost:<span id="increaseGrowthSpeedCost1">25</span>m <br/>
   <button onClick = "IncreaseGrowthSpeed(1)">Buy</button> 
+  </div>
   <br/>
   <br/>
+   <div id="rankSection" style = "display:none;">
   More Bamboo <br/>
    Cost:<span id="increaseRankCost1">200</span>m <br/>
   <span id="rankButton1"><button onClick = "IncreaseRank(1)">Buy</button> </span>
+   </div>
   <br/>
   <br/>
   </div>
