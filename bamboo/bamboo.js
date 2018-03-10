@@ -383,7 +383,7 @@ function IncreaseBambooSize (plant)
 		max++;
 		mReached = 0;
 		shootsCollected = shootsCollected - cost;
-		cost = cost * 1.5;
+		cost = Math.floor(cost * 1.5);
 		
 		if(plant == 1){
 			bambooSizeCost = cost;
@@ -416,6 +416,13 @@ function IncreaseBambooSize (plant)
 		document.getElementById(docID).innerHTML = cost;
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 		Reveal(newName);
+		
+		if (max >= 20)
+		{
+			var buttonID = "sizeButton" + String(plant);
+			document.getElementById(docID).innerHTML = "MAX";
+			Hide(buttonID);
+		}
 	}
 }
 
@@ -452,7 +459,7 @@ function IncreaseLeafChance (plant)
 		shootsCollected = shootsCollected - cost;
 		lChance = lChance + 50;
 		dlChance = dlChance + 10;
-		cost = cost * 1.5;
+		cost = Math.floor(cost * 1.5);
 		
 		if(plant == 1){
 			leafChanceCost = cost;
@@ -509,7 +516,7 @@ function IncreaseGrowthSpeed (plant)
 	{
 		shootsCollected = shootsCollected - cost;
 		if(timer > 150){timer = timer - 100;}
-		cost = cost * 1.5;
+		cost = Math.floor(cost * 1.5);
 		
 		if(plant == 1){
 			growthSpeedCost = cost;
@@ -577,25 +584,32 @@ function IncreaseRank (plant)
 	}
 		
 	if(plant == 1){
-		rankCost = rankCost * 1.5;
+		rankCost = Math.floor(rankCost * 1.5);
 		cost = rankCost;
 	}else if (plant == 2){
-		rankCost2 = rankCost2 * 1.5;
+		rankCost2 = Math.floor(rankCost * 1.5);
 		cost = rankCost2;
 	}else if (plant == 3){
-		rankCost3 = rankCost3 * 1.5;
+		rankCost3 = Math.floor(rankCost * 1.5);
 		cost = rankCost3;
 	}else if (plant == 4){
-		rankCost4 = rankCost4 * 1.5;
+		rankCost4 = Math.floor(rankCost * 1.5);
 		cost = rankCost4;
 	}else if (plant == 5){
-		rankCost5 = rankCost5 * 1.5;
+		rankCost5 = Math.floor(rankCost * 1.5);
 		cost = rankCost5;
 	}
 		
 	var docID = "increaseRankCost" + String(plant);
 	document.getElementById(docID).innerHTML = cost;
 	document.getElementById("shootsCollected").innerHTML = shootsCollected;
+	
+	if (bRank >= 3)
+		{
+			var buttonID = "rankButton" + String(plant);
+			document.getElementById(docID).innerHTML = "MAX";
+			Hide(buttonID);
+		}
 }
 
 function GetRandomInt(max) 
