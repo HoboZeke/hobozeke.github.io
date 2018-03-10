@@ -522,9 +522,11 @@ function IncreaseLeafChance (plant)
 			leafChance5 = lChance;
 			doubleLeafChance5 = dlChance;
 		}
-	
+		
+		var spanID = "leafChance" + String(plant);
 		var docID = "increaseLeafChanceCost" + String(plant);
 		document.getElementById(docID).innerHTML = cost+ "m";
+		document.getElementById(spanID).innerHTML = "Single:" + lChance/10 + "% Double:" + dlChance/10 + "%";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
 }
@@ -575,7 +577,9 @@ function IncreaseGrowthSpeed (plant)
 			intervalTimer5 = timer;
 		}
 		
+		var spanID = "grwothRate" + String(plant);
 		var docID = "increaseGrowthSpeedCost" + String(plant);
+		document.getElementById(spanID).innerHTML = "Every " + timer/1000 + " seconds";
 		document.getElementById(docID).innerHTML = cost+ "m";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
