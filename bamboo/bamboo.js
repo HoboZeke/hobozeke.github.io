@@ -93,11 +93,55 @@ var bambooShootLeafBothR3 = "<>III<><br/>";
 
 function OnLoad()
 {
+	Load();
+	
 	FirstTimer();
 	SecondTimer();
 	ThirdTimer();
 	FourthTimer();
 	FifthTimer();
+	
+	//Cycle through the plants, revealing all that the player has bought
+	for(i=0, i<plantCount, i++)
+	{
+		var newPlant = "plant" + String(i+1);
+		Reveal(newPlant);
+	}
+	
+	//Update the upgrades with that which is already been bought
+	if(upgradeCount == 1){
+		Reveal("leafSection");
+		Hide ("leafUpgrade");
+	} else if (upgradeCount == 2){
+		Reveal("growthSection");
+		Hide ("growthUpgrade");
+	} else if (upgradeCount == 4){
+		Reveal("rankSection");
+		Hide ("rankUpgrade");
+	} else if (upgradeCount == 3){
+		Reveal("leafSection");
+		Hide ("leafUpgrade");
+		Reveal("growthSection");
+		Hide ("growthUpgrade");
+	} else if (upgradeCount == 5){
+		Reveal("leafSection");
+		Hide ("leafUpgrade");
+		Reveal("rankSection");
+		Hide ("rankUpgrade");
+	} else if (upgradeCount == 6){
+		Reveal("growthSection");
+		Hide ("growthUpgrade");
+		Reveal("rankSection");
+		Hide ("rankUpgrade");
+	} else if (upgradeCount == 7){
+		Reveal("leafSection");
+		Hide ("leafUpgrade");
+		Reveal("growthSection");
+		Hide ("growthUpgrade");
+		Reveal("rankSection");
+		Hide ("rankUpgrade");
+	}
+	
 }
 
 function BuyPlant()
@@ -137,17 +181,17 @@ function BuyUpgrade(upgrade)
 	if(upgrade == 1){
 		Reveal("leafSection");
 		Hide ("leafUpgrade");
-		upgradeCount++;}
+		upgradeCount+= 1;}
 	else if (upgrade == 2){
 		Reveal("growthSection");
 		Hide ("growthUpgrade");
-		upgradeCount++;}
+		upgradeCount+= 2;}
 	else if (upgrade == 3){
 		Reveal("rankSection");
 		Hide ("rankUpgrade");
-		upgradeCount++;}
+		upgradeCount+= 4;}
 	
-	if(upgradeCount >= 3)
+	if(upgradeCount >= 7)
 	{
 		Reveal("plantUpgrade");
 	}
@@ -309,6 +353,8 @@ function GrowBamboo(plant)
 		leafChance5 = lChance;
 		doubleLeafChance5 = dlChance;
 	}
+	
+	Save();
 }
 
 function Harvest(plant)
@@ -391,6 +437,8 @@ function Harvest(plant)
 		leafCount5 = lCount;
 		maxReached5 = mReached;
 	}
+	
+	Save();
 }
 	
 function IncreaseBambooSize (plant)
@@ -467,6 +515,8 @@ function IncreaseBambooSize (plant)
 			Hide(buttonID);
 		}
 	}
+	
+	Save();
 }
 
 function IncreaseLeafChance (plant)
@@ -532,6 +582,8 @@ function IncreaseLeafChance (plant)
 		document.getElementById(spanID).innerHTML = "Single:" + lChance/10 + "% Double:" + dlChance/10 + "%";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
+	
+	Save();
 }
 
 function IncreaseGrowthSpeed (plant)
@@ -586,6 +638,8 @@ function IncreaseGrowthSpeed (plant)
 		document.getElementById(docID).innerHTML = cost+ "m";
 		document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	}
+	
+	Save();
 }
 
 function IncreaseRank (plant)
@@ -652,11 +706,13 @@ function IncreaseRank (plant)
 	document.getElementById("shootsCollected").innerHTML = shootsCollected;
 	
 	if (bRank >= 3)
-		{
-			var buttonID = "rankButton" + String(plant);
-			document.getElementById(docID).innerHTML = "MAX";
-			Hide(buttonID);
-		}
+	{
+		var buttonID = "rankButton" + String(plant);
+		document.getElementById(docID).innerHTML = "MAX";
+		Hide(buttonID);
+	}
+	
+	Save();
 }
 
 function GetRandomInt(max) 
@@ -676,6 +732,145 @@ function Hide(name)
 	x.style.display = "none";
 }
 
+function Save() {
+       
+    	var saveGame = {
+	    	bambooLength:bambooLength,
+		bambooLength2:bambooLength2,
+		bambooLength3:bambooLength3,
+		bambooLength4:bambooLength4,
+		bambooLength5:bambooLength5,
+		maxBambooHeight:maxBambooHeight,
+		maxBambooHeight2:maxBambooHeight2,
+		maxBambooHeight3:maxBambooHeight3,
+		maxBambooHeight4:maxBambooHeight4,
+		maxBambooHeight5:maxBambooHeight5,
+		maxReached:maxReached,
+		maxReached2:maxReached2,
+		maxReached3:maxReached3,
+		maxReached4:maxReached4,
+		maxReached5:maxReached5,
+		intervalTimer:intervalTimer,
+		intervalTimer2:intervalTimer2,
+		intervalTimer3:intervalTimer3,
+		intervalTimer4:intervalTimer4,
+		intervalTimer5:intervalTimer5,
+		leafCount:leafCount,
+		leafCount2:leafCount2,
+		leafCount3:leafCount3,
+		leafCount4:leafCount4,
+		leafCount5:leafCount5,
+		leafChance:leafChance,
+		leafChance2:leafChance2,
+		leafChance3:leafChance3,
+		leafChance4:leafChance4,
+		leafChance5:leafChance5,
+		doubleLeafChance:doubleLeafChance,
+		doubleLeafChance2:doubleLeafChance2,
+		doubleLeafChance3:doubleLeafChance3,
+		doubleLeafChance4:doubleLeafChance4,
+		doubleLeafChance5:doubleLeafChance5,
+		bambooSizeCost:bambooSizeCost,
+		bambooSizeCost2:bambooSizeCost2,
+		bambooSizeCost3:bambooSizeCost3,
+		bambooSizeCost4:bambooSizeCost4,
+		bambooSizeCost5:bambooSizeCost5,
+		growthSpeedCost:growthSpeedCost,
+		growthSpeedCost2:growthSpeedCost2,
+		growthSpeedCost3:growthSpeedCost3,
+		growthSpeedCost4:growthSpeedCost4,
+		growthSpeedCost5:growthSpeedCost5,
+		leafChanceCost:leafChanceCost,
+		leafChanceCost2:leafChanceCost2,
+		leafChanceCost3:leafChanceCost3,
+		leafChanceCost4:leafChanceCost4,
+		leafChanceCost5:leafChanceCost5,
+		rankCost:rankCost,
+		rankCost2:rankCost2,
+		rankCost3:rankCost3,
+		rankCost4:rankCost4,
+		rankCost5:rankCost5,
+		bambooRank:bambooRank,
+		bambooRank2:bambooRank2,
+		bambooRank3:bambooRank3,
+		bambooRank4:bambooRank4,
+		bambooRank5:bambooRank5
+    	}
+    	localStorage.setItem("saveGame",JSON.stringify(saveGame));  
+}
+
+function Load() {
+	   
+    	var loadGame = JSON.parse(localStorage.getItem("saveGame"));    
+   	
+	bambooLength = loadGame.bambooLength;
+	bambooLength2 = loadGame.bambooLength2;
+	bambooLength3 = loadGame.bambooLength3;
+	bambooLength4 = loadGame.bambooLength4;
+	bambooLength5 = loadGame.bambooLength5;
+	maxBambooHeight = loadGame.maxBambooHeight;
+	maxBambooHeight2 = loadGame.maxBambooHeight2;
+	maxBambooHeight3 = loadGame.maxBambooHeight3;
+	maxBambooHeight4 = loadGame.maxBambooHeight4;
+	maxBambooHeight5 = loadGame.maxBambooHeight5;
+	maxReached = loadGame.maxReached;
+	maxReached2 = loadGame.maxReached2;
+	maxReached3 = loadGame.maxReached3;
+	maxReached4 = loadGame.maxReached4;
+	maxReached5 = loadGame.maxReached5;
+	intervalTimer = loadGame.intervalTimer;
+	intervalTimer2 = loadGame.intervalTimer2;
+	intervalTimer3 = loadGame.intervalTimer3;
+	intervalTimer4 = loadGame.intervalTimer4;
+	intervalTimer5 = loadGame.intervalTimer5;
+	leafCount = loadGame.leafCount;
+	leafCount2 = loadGame.leafCount2;
+	leafCount3 = loadGame.leafCount3;
+	leafCount4 = loadGame.leafCount4;
+	leafCount5 = loadGame.leafCount5;
+	leafChance = loadGame.leafChance;
+	leafChance2 = loadGame.leafChance2;
+	leafChance3 = loadGame.leafChance3;
+	leafChance4 = loadGame.leafChance4;
+	leafChance5 = loadGame.leafChance5;
+	doubleLeafChance = loadGame.doubleLeafChance;
+	doubleLeafChance2 = loadGame.doubleLeafChance2;
+	doubleLeafChance3 = loadGame.doubleLeafChance3;
+	doubleLeafChance4 = loadGame.doubleLeafChance4;
+	doubleLeafChance5 = loadGame.doubleLeafChance5;
+	bambooSizeCost = loadGame.bambooSizeCost;
+	bambooSizeCost2 = loadGame.bambooSizeCost2;
+	bambooSizeCost3 = loadGame.bambooSizeCost3;
+	bambooSizeCost4 = loadGame.bambooSizeCost4;
+	bambooSizeCost5 = loadGame.bambooSizeCost5;
+	growthSpeedCost = loadGame.growthSpeedCost;
+	growthSpeedCost2 = loadGame.growthSpeedCost2;
+	growthSpeedCost3 = loadGame.growthSpeedCost3;
+	growthSpeedCost4 = loadGame.growthSpeedCost4;
+	growthSpeedCost5 = loadGame.growthSpeedCost5;
+	leafChanceCost = loadGame.leafChanceCost;
+	leafChanceCost2 = loadGame.leafChanceCost2;
+	leafChanceCost3 = loadGame.leafChanceCost3;
+	leafChanceCost4 = loadGame.leafChanceCost4;
+	leafChanceCost5 = loadGame.leafChanceCost5;
+	rankCost = loadGame.rankCost;
+	rankCost2 = loadGame.rankCost2;
+	rankCost3 = loadGame.rankCost3;
+	rankCost4 = loadGame.rankCost4;
+	rankCost5 = loadGame.rankCost5;
+	bambooRank = loadGame.bambooRank;
+	bambooRank2 = loadGame.bambooRank2;
+	bambooRank3 = loadGame.bambooRank3;
+	bambooRank4 = loadGame.bambooRank4;
+	bambooRank5 = loadGame.bambooRank5;
+}
+
+
+function DeleteSave()
+{
+	localStorage.removeItem("saveGame");
+	setup();
+}
 
 function FirstTimer()
 {
