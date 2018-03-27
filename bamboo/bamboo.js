@@ -88,7 +88,9 @@ var bambooShootLeafBothR2 = "&#8239;&#8239;&#8239;<>II<><br/>";
 var bambooShootBaseR3 = "III";
 var bambooShootR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
 var bambooShootLeafLeftR3 = "<>III<br/>";
+var bambooShootLeafLeftR3v2 = "&#8239;&#8239;&#8239;<>II<br/>";
 var bambooShootLeafRightR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
+var bambooShootLeafRightR3v2 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
 var bambooShootLeafBothR3 = "<>III<><br/>";
 
 function OnLoad()
@@ -260,6 +262,7 @@ function GrowBamboo(plant)
 	var index = bLength;
 	var name = bName + String(index);
 	var chance = GetRandomInt(1000);
+	var randNum = GetRandomInt(100);
 		
 	if (bLength<=1) //A catch for the first shoot, to allow proper rendering of plant pot.
 	{
@@ -287,14 +290,18 @@ function GrowBamboo(plant)
 			{
 				if(bRank==1){document.getElementById(name).innerHTML = bambooShootLeafRight;}
 				else if(bRank==2){document.getElementById(name).innerHTML = bambooShootLeafRightR2;}
-				else if(bRank==3){document.getElementById(name).innerHTML = bambooShootLeafRightR3;}
+				else if(bRank==3){
+					if(randNum >=50){document.getElementById(name).innerHTML = bambooShootLeafRightR3;}
+					else{document.getElementById(name).innerHTML = bambooShootLeafRightR3v2;}}
 				lCount = lCount + 1;
 			}
 			else
 			{
 				if(bRank==1){document.getElementById(name).innerHTML = bambooShootLeafLeft;}
 				else if(bRank==2){document.getElementById(name).innerHTML = bambooShootLeafLeftR2;}
-				else if(bRank==3){document.getElementById(name).innerHTML = bambooShootLeafLeftR3;}
+				else if(bRank==3){
+					if(randNum >=50){document.getElementById(name).innerHTML = bambooShootLeafLeftR3;}
+					else{document.getElementById(name).innerHTML = bambooShootLeafLeftR3v2;}}
 				lCount = lCount + 1;
 			}
 		}
