@@ -692,18 +692,23 @@ function IncreaseRank (plant)
 	}
 		
 	if(plant == 1){
+		Harvest(1);
 		rankCost = Math.floor(rankCost * 1.5);
 		cost = rankCost;
 	}else if (plant == 2){
+		Harvest(2);
 		rankCost2 = Math.floor(rankCost * 1.5);
 		cost = rankCost2;
 	}else if (plant == 3){
+		Harvest(3);
 		rankCost3 = Math.floor(rankCost * 1.5);
 		cost = rankCost3;
 	}else if (plant == 4){
+		Harvest(4);
 		rankCost4 = Math.floor(rankCost * 1.5);
 		cost = rankCost4;
 	}else if (plant == 5){
+		Harvest(5);
 		rankCost5 = Math.floor(rankCost * 1.5);
 		cost = rankCost5;
 	}
