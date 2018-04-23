@@ -104,7 +104,7 @@ function OnLoad()
 	FifthTimer();
 	
 	//Cycle through the plants, revealing all that the player has bought
-	for(i=0, i<plantCount, i++)
+	for(i=0; i<plantCount; i++)
 	{
 		var newPlant = "plant" + String(i+1);
 		Reveal(newPlant);
