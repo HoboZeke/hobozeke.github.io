@@ -619,7 +619,7 @@ function IncreaseGrowthSpeed (plant)
 	else
 	{
 		shootsCollected = shootsCollected - cost;
-		if(timer > 150){timer = timer - 100;}
+		if(timer > 150){timer = timer - 200;}
 		cost = Math.floor(cost * 1.5);
 		
 		if(plant == 1){
