@@ -88,7 +88,7 @@ var bambooShootLeafBothR2 = "&#8239;&#8239;&#8239;<>II<><br/>";
 var bambooShootBaseR3 = "III";
 var bambooShootR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<br/>";
 var bambooShootLeafLeftR3 = "<>III<br/>";
-var bambooShootLeafLeftR3v2 = "&#8239;&#8239;&#8239;<>II<br/>";
+var bambooShootLeafLeftR3v2 = "&#8239;<>II<br/>";
 var bambooShootLeafRightR3 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;III<><br/>";
 var bambooShootLeafRightR3v2 = "&#8239;&nbsp;&nbsp;&nbsp;&nbsp;II<><br/>";
 var bambooShootLeafBothR3 = "<>III<><br/>";
@@ -481,7 +481,7 @@ function IncreaseBambooSize (plant)
 		max++;
 		mReached = 0;
 		shootsCollected = shootsCollected - cost;
-		cost = Math.floor(cost * 1.5);
+		cost = Math.floor(cost * 1.2);
 		
 		if(plant == 1){
 			bambooSizeCost = cost;
@@ -559,7 +559,7 @@ function IncreaseLeafChance (plant)
 		shootsCollected = shootsCollected - cost;
 		lChance = lChance + 50;
 		dlChance = dlChance + 10;
-		cost = Math.floor(cost * 1.5);
+		cost = Math.floor(cost * 1.2);
 		
 		if(plant == 1){
 			leafChanceCost = cost;
@@ -620,7 +620,7 @@ function IncreaseGrowthSpeed (plant)
 	{
 		shootsCollected = shootsCollected - cost;
 		if(timer > 150){timer = timer - 200;}
-		cost = Math.floor(cost * 1.5);
+		cost = Math.floor(cost * 1.2);
 		
 		if(plant == 1){
 			growthSpeedCost = cost;
