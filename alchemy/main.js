@@ -22,7 +22,6 @@ var currentSolutionCount = 0;
 
 function Setup()
 {
-   document.getElementById("grid").innerHTML = JSON.stringify(grid);
 }
 
 function ChooseStartingBase(base)
