@@ -86,18 +86,33 @@ function CheckForSilver(stage)
     }else{
       document.getElementById("12thsuccess").innerHTML = "FAILURE";
     }
+    
+    base1 = startingBase1;
+    base2 = startingBase2;
+    base3 = startingBase3;
+    document.getElementById("startingBase1b").innerHTML = startingBase1;
+    document.getElementById("startingBase2b").innerHTML = startingBase1;
+    document.getElementById("startingBase3b").innerHTML = startingBase1;
   }else if (stage == 2){
       if (base1 == 0 && base2 == 0 && base3 == 0){
       document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
     }else{
       document.getElementById("24thsuccess").innerHTML = "FAILURE";
     }
+    
+    base1 = startingBase1;
+    base2 = startingBase2;
+    base3 = startingBase3;
+    document.getElementById("startingBase1c").innerHTML = startingBase1;
+    document.getElementById("startingBase2c").innerHTML = startingBase1;
+    document.getElementById("startingBase3c").innerHTML = startingBase1;
   }else if (stage == 3){
       if (base1 == 0 && base2 == 0 && base3 == 0){
       document.getElementById("36thsuccess").innerHTML = "SUCCESS!";
     }else{
       document.getElementById("36thsuccess").innerHTML = "FAILURE";
     }
+    
   }
 }
 
