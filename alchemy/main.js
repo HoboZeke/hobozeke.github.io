@@ -68,6 +68,37 @@ function ApplySolution(solution)
   document.getElementById(stringA).innerHTML = CovertIndexToElement(resultA);
   document.getElementById(stringB).innerHTML = CovertIndexToElement(resultB);
   document.getElementById(stringC).innerHTML = CovertIndexToElement(resultC);
+  
+  if (currentSolutionCount == 12){
+   CheckForSilver(1); 
+  }else if (currentSolutionCount == 24){
+    CheckForSilver(2);
+  }else if (currentSolutionCount == 36){
+    CheckForSilver(3);
+  }
+}
+
+function CheckForSilver(stage)
+{
+  if (stage == 1){
+    if (base1 == 0 && base2 == 0 && base3 == 0){
+      document.getElementById("12thsuccess").innerHTML = "SUCCESS!";
+    }else{
+      document.getElementById("12thsuccess").innerHTML = "FAILURE";
+    }
+  }else if (stage == 2){
+      if (base1 == 0 && base2 == 0 && base3 == 0){
+      document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
+    }else{
+      document.getElementById("24thsuccess").innerHTML = "FAILURE";
+    }
+  }else if (stage == 3){
+      if (base1 == 0 && base2 == 0 && base3 == 0){
+      document.getElementById("36thsuccess").innerHTML = "SUCCESS!";
+    }else{
+      document.getElementById("36thsuccess").innerHTML = "FAILURE";
+    }
+  }
 }
 
 function CovertIndexToElement(index)
