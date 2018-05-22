@@ -1,6 +1,11 @@
 #header {
   text-align: center ;
 }
+#column0 {
+  float: left ;
+  width: 40px ;
+  margin-right: 5px;
+}
 #column1 {
   float: left ;
   width: 80px ;
