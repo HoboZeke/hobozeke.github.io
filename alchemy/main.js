@@ -12,6 +12,8 @@ int [][] grid = { {9,9,9,7,7,9,7,7,7,7,9,9,9,7,9,7,9,9,9,7,7,9,7,7,9,7,9,9,7,7,7
                   {3,3,2,3,2,2,2,3,2,3,3,2,3,3,2,3,3,3,2,3,2,2,3,3,2,3,2,3,2,2,2,3,2,3,3,2} };
 //1=Copper 2=Lead 3=Iron 4=Charcoal 5=Tin 6=Sulpher 7=Mercury 8=Zinc 9=Arsenic 10=Antimony 11=Bismuth 12=Phosphorus 0 = silver
 
+var usedSolutions = [100,111]; //A couple of element just to populate to be overwritten. 
+
 var startingBase1 = 0;
 var startingBase2 = 0;
 var startingBase3 = 0;
@@ -52,7 +54,9 @@ function ChooseStartingBase(base)
 
 function ApplySolution(solution)
 {
+  usedSolutions[currnetSolutionCount] = solution;
   currentSolutionCount = currentSolutionCount + 1;
+
   var stringA = "solutionResultA" + currentSolutionCount;
   var stringB = "solutionResultB" + currentSolutionCount;
   var stringC = "solutionResultC" + currentSolutionCount;
@@ -95,7 +99,11 @@ function CheckForSilver(stage)
     document.getElementById("startingBase3b").innerHTML = startingBase1;
   }else if (stage == 2){
       if (base1 == 0 && base2 == 0 && base3 == 0){
-      document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
+        if(CheckDuplicateSolutions()){
+          document.getElementById("24thsuccess").innerHTML = "DUPLICATE SOLUTIONS USED";
+        }else{
+          document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
+        }
     }else{
       document.getElementById("24thsuccess").innerHTML = "FAILURE";
     }
@@ -114,6 +122,19 @@ function CheckForSilver(stage)
     }
     
   }
+}
+
+function CheckDuplicateSolutions()
+{
+  var counts = [];
+    for(var i = 0; i <= usedSolutions.length; i++) {
+        if(counts[usedSolutions[i]] === undefined) {
+            counts[usedSolutions[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
 }
 
 function CovertIndexToElement(index)
