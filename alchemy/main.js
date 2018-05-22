@@ -60,6 +60,7 @@ function ApplySolution(solution)
   var stringA = "solutionResultA" + currentSolutionCount;
   var stringB = "solutionResultB" + currentSolutionCount;
   var stringC = "solutionResultC" + currentSolutionCount;
+  var stringD = "solution" + currentSolutionCount;
   
   var resultA = grid [base1-1][solution-1];
   var resultB = grid [base2-1][solution-1];
@@ -72,6 +73,7 @@ function ApplySolution(solution)
   document.getElementById(stringA).innerHTML = CovertIndexToElement(resultA);
   document.getElementById(stringB).innerHTML = CovertIndexToElement(resultB);
   document.getElementById(stringC).innerHTML = CovertIndexToElement(resultC);
+  document.getElementById(stringD).innerHTML = solution;
   
   if (currentSolutionCount == 12){
    CheckForSilver(1); 
