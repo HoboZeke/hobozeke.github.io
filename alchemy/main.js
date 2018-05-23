@@ -118,7 +118,10 @@ function CheckForSilver(stage)
     document.getElementById("startingBase3c").innerHTML = startingBase1;
   }else if (stage == 3){
       if (base1 == 0 && base2 == 0 && base3 == 0){
-      document.getElementById("36thsuccess").innerHTML = "SUCCESS!";
+        if(CheckDuplicateSolutions()){
+          document.getElementById("24thsuccess").innerHTML = "DUPLICATE SOLUTIONS USED";
+        }else{
+          document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
     }else{
       document.getElementById("36thsuccess").innerHTML = "FAILURE";
     }
