@@ -122,6 +122,7 @@ function CheckForSilver(stage)
           document.getElementById("24thsuccess").innerHTML = "DUPLICATE SOLUTIONS USED";
         }else{
           document.getElementById("24thsuccess").innerHTML = "SUCCESS!";
+        }
     }else{
       document.getElementById("36thsuccess").innerHTML = "FAILURE";
     }
