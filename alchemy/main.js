@@ -40,21 +40,21 @@ function ChooseStartingBase(base)
   if (startingBase1 == 0)  {
     startingBase1 = base;
     base1 = startingBase1;
-    document.getElementById("startingBase1").innerHTML = startingBase1;
+    document.getElementById("startingBase1").innerHTML = CovertIndexToElement(startingBase1);
   }else if (startingBase2 == 0){
     startingBase2 = base;
     base2 = startingBase2;
-    document.getElementById("startingBase2").innerHTML = startingBase2;
+    document.getElementById("startingBase2").innerHTML = CovertIndexToElement(startingBase2);
   }else if (startingBase3 == 0){
     startingBase3 = base;
     base3 = startingBase3;
-    document.getElementById("startingBase3").innerHTML = startingBase3;
+    document.getElementById("startingBase3").innerHTML = CovertIndexToElement(startingBase3);
   }
 }
 
 function ApplySolution(solution)
 {
-  usedSolutions[currnetSolutionCount] = solution;
+  usedSolutions[currentSolutionCount] = solution;
   currentSolutionCount = currentSolutionCount + 1;
 
   var stringA = "solutionResultA" + currentSolutionCount;
@@ -96,9 +96,9 @@ function CheckForSilver(stage)
     base1 = startingBase1;
     base2 = startingBase2;
     base3 = startingBase3;
-    document.getElementById("startingBase1b").innerHTML = startingBase1;
-    document.getElementById("startingBase2b").innerHTML = startingBase1;
-    document.getElementById("startingBase3b").innerHTML = startingBase1;
+    document.getElementById("startingBase1b").innerHTML = CovertIndexToElement(startingBase1);
+    document.getElementById("startingBase2b").innerHTML = CovertIndexToElement(startingBase2);
+    document.getElementById("startingBase3b").innerHTML = CovertIndexToElement(startingBase3);
   }else if (stage == 2){
       if (base1 == 0 && base2 == 0 && base3 == 0){
         if(CheckDuplicateSolutions()){
@@ -113,9 +113,9 @@ function CheckForSilver(stage)
     base1 = startingBase1;
     base2 = startingBase2;
     base3 = startingBase3;
-    document.getElementById("startingBase1c").innerHTML = startingBase1;
-    document.getElementById("startingBase2c").innerHTML = startingBase1;
-    document.getElementById("startingBase3c").innerHTML = startingBase1;
+    document.getElementById("startingBase1c").innerHTML = CovertIndexToElement(startingBase1);
+    document.getElementById("startingBase2c").innerHTML = CovertIndexToElement(startingBase2);
+    document.getElementById("startingBase3c").innerHTML = CovertIndexToElement(startingBase3);
   }else if (stage == 3){
       if (base1 == 0 && base2 == 0 && base3 == 0){
         if(CheckDuplicateSolutions()){
